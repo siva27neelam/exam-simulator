@@ -3,7 +3,7 @@ name: Build and Push Docker Image (Auto Version)
 on:
   push:
     branches:
-      - master  # or master
+      - master  # or
 
 jobs:
   build:
