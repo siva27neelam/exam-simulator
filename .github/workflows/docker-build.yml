@@ -17,7 +17,7 @@ jobs:
       - name: Get latest version
         id: version
         run: |
-          IMAGE=${{ secrets.DOCKERHUB_USERNAME }}/my-web-app
+          IMAGE=${{ secrets.DOCKERHUB_USERNAME }}/exam-simulator
           TOKEN=${{ secrets.DOCKERHUB_TOKEN }}
           # Get all tags, filter v*, extract highest, increment
           LATEST_VERSION=$(curl -s -u "${{ secrets.DOCKERHUB_USERNAME }}:${{ secrets.DOCKERHUB_TOKEN }}" \
@@ -44,5 +44,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/my-web-app:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/my-web-app:${{ env.NEW_VERSION }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/exam-simulator:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/exam-simulator:${{ env.NEW_VERSION }}
