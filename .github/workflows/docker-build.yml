@@ -3,7 +3,7 @@ name: Build and Push Docker Image (Auto Version)
 on:
   push:
     branches:
-      - master  # or
+      - master
 
 jobs:
   build:
@@ -13,13 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Get the current version tag from Docker Hub
       - name: Get latest version
         id: version
         run: |
           IMAGE=${{ secrets.DOCKERHUB_USERNAME }}/exam-simulator
           TOKEN=${{ secrets.DOCKERHUB_TOKEN }}
-          # Get all tags, filter v*, extract highest, increment
           LATEST_VERSION=$(curl -s -u "${{ secrets.DOCKERHUB_USERNAME }}:${{ secrets.DOCKERHUB_TOKEN }}" \
             "https://hub.docker.com/v2/repositories/${IMAGE}/tags/?page_size=100" \
             | jq -r '.results[].name' | grep '^v' | sort -V | tail -n 1)
@@ -46,3 +44,10 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/exam-simulator:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/exam-simulator:${{ env.NEW_VERSION }}
+
+      # 🚀 Auto-redeploy Portainer Stack
+      - name: Redeploy Stack via Portainer API
+        run: |
+          curl -k -X POST \
+            -H "X-API-Key: ${{ secrets.PORTAINER_API_KEY }}" \
+            https://portainer1.haska.in/api/stacks/3/redeploy
