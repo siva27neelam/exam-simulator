@@ -48,6 +48,8 @@ jobs:
       # 🚀 Auto-redeploy Portainer Stack
       - name: Redeploy Stack via Portainer API
         run: |
-          curl -k -X POST \
+          curl -k -X PUT \
             -H "X-API-Key: ${{ secrets.PORTAINER_API_KEY }}" \
-            https://portainer1.haska.in/api/stacks/3/redeploy
+            -H "Content-Type: application/json" \
+            -d '{"Prune": true}' \
+            https://portainer1.haska.in/api/stacks/3?endpointId=1
