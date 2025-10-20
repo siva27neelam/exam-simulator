@@ -1,0 +1,2238 @@
+[
+  {
+    "number": 191,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "The price of Azure storage varies by region",
+        "answer": "Yes"
+      },
+      {
+        "text": "You are charged for read and write operations in general-purpose v2 storage accounts",
+        "answer": "Yes"
+      },
+      {
+        "text": "When you copy data between storage accounts in different regions, you are not charged",
+        "answer": "No"
+      }
+    ],
+    "explanation": "Azure storage pricing varies by region. Read and write operations incur charges in general-purpose v2 accounts. Copying data between regions incurs bandwidth charges for both read and write operations."
+  },
+  {
+    "number": 192,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Private preview services are available to all Azure customers",
+        "answer": "No"
+      },
+      {
+        "text": "Azure services in public preview can be managed using the regular management tools",
+        "answer": "Yes"
+      },
+      {
+        "text": "When a service is released to general availability, costs decrease",
+        "answer": "No"
+      }
+    ],
+    "explanation": "Private preview is only for selected customers. Public preview services can be managed with regular tools. Costs typically increase (not decrease) when services move to general availability."
+  },
+  {
+    "number": 193,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which statement accurately describes the Modern Lifecycle Policy for Azure services?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Microsoft provides mainstream support for a service for five years."
+      },
+      {
+        "label": "B",
+        "text": "Microsoft provides a minimum of 12 months notice before ending support for a service."
+      },
+      {
+        "label": "C",
+        "text": "After a service is made generally available, Microsoft provides support for the service for a minimum of four years."
+      },
+      {
+        "label": "D",
+        "text": "When a service is retired, you can purchase extended support for the service for up to five years."
+      }
+    ],
+    "answer": "B",
+    "explanation": "The Modern Lifecycle Policy states that Microsoft will provide a minimum of 12 months' notification prior to ending support if no successor product or service is offered."
+  },
+  {
+    "number": 194,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "You need to request that Microsoft increase a subscription quota limit for your company.\n\nWhich blade should you use from the Azure portal? To answer, select the appropriate blade in the answer area.",
+    "statements": [
+      {
+        "text": "Use the 'Help + support' blade to create a new support request for quota increases",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "To request quota limit increases, you create a new support request from the Help + support blade, selecting 'Service and subscription limits (quotas)' as the issue type."
+  },
+  {
+    "number": 195,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "This question requires that you evaluate the underlined BOLD text to determine if it is correct.\n\nYou can use Advisor recommendations in Azure to send email alerts when the cost of the current billing period for an Azure subscription exceeds a specified limit.\n\nInstructions: Review the underlined text. If it makes the statement correct, select 'No change is needed'. If the statement is incorrect, select the answer choice that makes the statement correct.",
+    "options": [
+      {
+        "label": "A",
+        "text": "No change is needed."
+      },
+      {
+        "label": "B",
+        "text": "Access control (IAM)"
+      },
+      {
+        "label": "C",
+        "text": "Budget alerts"
+      },
+      {
+        "label": "D",
+        "text": "Compliance"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Budget alerts in Azure Cost Management notify you when spending reaches or exceeds defined thresholds. Azure Advisor provides recommendations but doesn't send cost alerts."
+  },
+  {
+    "number": 196,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure services in public preview can be used in production environments",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure services in public preview are supported by Microsoft Support",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure services in public preview are subject to a Service Level Agreement (SLA)",
+        "answer": "No"
+      }
+    ],
+    "explanation": "Public preview services can be used in production. Microsoft provides support for preview services. However, preview services are excluded from SLAs."
+  },
+  {
+    "number": 197,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "With Azure ExpressRoute, all inbound data transfer is free of charge",
+        "answer": "Yes"
+      },
+      {
+        "text": "With Azure ExpressRoute, all outbound data transfer is free of charge",
+        "answer": "No"
+      },
+      {
+        "text": "With Azure ExpressRoute, you can connect your on-premises network to Azure",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "ExpressRoute inbound data transfer is free. Outbound data transfer is charged. ExpressRoute provides private connectivity between on-premises networks and Azure."
+  },
+  {
+    "number": 198,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Microsoft Defender for Cloud provides security recommendations",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Microsoft Defender for Cloud (formerly Azure Security Center) provides security recommendations to improve your security posture."
+  },
+  {
+    "number": 199,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Blueprints enable you to deploy multiple resource groups and apply policies",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Blueprints package various Azure resources including resource groups, policies, role assignments, and ARM templates for repeatable deployments."
+  },
+  {
+    "number": 200,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Policy ensures compliance by preventing non-compliant resources from being created",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Policy enforces organizational standards by evaluating resources and preventing creation of non-compliant resources."
+  },
+  {
+    "number": 201,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Tags can be used to organize Azure resources and manage costs",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Tags are name-value pairs that enable you to categorize resources and view consolidated billing by applying the same tag to multiple resources."
+  },
+  {
+    "number": 202,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Government is available only to US federal, state, and local government agencies",
+        "answer": "No"
+      },
+      {
+        "text": "Azure Government is available to US government agencies and their partners",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Government provides compliance with US government requirements",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Government is available to US government entities and contractors (not just agencies). It provides compliance with US government security and regulatory requirements."
+  },
+  {
+    "number": 203,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You plan to deploy several Azure virtual machines.\n\nYou need to control the ports that devices on the internet can use to access the virtual machines.\n\nWhat should you use?",
+    "options": [
+      {
+        "label": "A",
+        "text": "an Azure Active Directory (Azure AD) role"
+      },
+      {
+        "label": "B",
+        "text": "an Azure key vault"
+      },
+      {
+        "label": "C",
+        "text": "an Azure Active Directory group"
+      },
+      {
+        "label": "D",
+        "text": "a network security group (NSG)"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Network security groups (NSGs) contain security rules that allow or deny inbound and outbound network traffic based on source/destination IP, port, and protocol."
+  },
+  {
+    "number": 204,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Advisor provides recommendations on cost, security, reliability, operational excellence, and performance",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Advisor is a personalized cloud consultant that provides best practices and recommendations across five categories: cost, security, reliability, operational excellence, and performance."
+  },
+  {
+    "number": 205,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "An Azure administrator plans to run a PowerShell script that creates Azure resources.\n\nYou need to recommend which computer configuration to use to run the script.\n\nWhich three computers can run the script? Each correct answer presents a complete solution.",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {
+        "label": "A",
+        "text": "a computer that runs macOS and has PowerShell Core 6.0 installed"
+      },
+      {
+        "label": "B",
+        "text": "a computer that runs Windows 10 and has the Azure PowerShell module installed"
+      },
+      {
+        "label": "C",
+        "text": "a computer that runs Chrome OS and uses Azure Cloud Shell"
+      },
+      {
+        "label": "D",
+        "text": "a computer that runs Linux and has the Azure CLI tools installed"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "PowerShell scripts can run on macOS with PowerShell Core, Windows with Azure PowerShell module, and any browser-capable device using Azure Cloud Shell. Azure CLI doesn't run PowerShell scripts."
+  },
+  {
+    "number": 206,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure has built-in authentication and authorization services that provide secure access to Azure resources",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Active Directory (Azure AD) provides authentication and authorization services",
+        "answer": "Yes"
+      },
+      {
+        "text": "Role-based access control (RBAC) provides fine-grained access management for Azure resources",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure has built-in security services. Azure AD provides identity and access management. RBAC enables fine-grained access control to Azure resources."
+  },
+  {
+    "number": 207,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Key Vault can be used to store secrets and certificates",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Key Vault can be used to perform encryption operations",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Key Vault can be used to manage Azure Active Directory users",
+        "answer": "No"
+      }
+    ],
+    "explanation": "Azure Key Vault stores secrets, keys, and certificates. It can perform cryptographic operations. It doesn't manage Azure AD users - that's done through Azure AD."
+  },
+  {
+    "number": 208,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Resource Manager templates use JSON format",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Resource Manager (ARM) templates are written in JSON (JavaScript Object Notation) format to define infrastructure and configuration declaratively."
+  },
+  {
+    "number": 209,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Databricks is used for big data analytics",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure HDInsight is used for big data analytics",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Data Factory is used for big data analytics",
+        "answer": "No"
+      }
+    ],
+    "explanation": "Azure Databricks and HDInsight are for big data analytics. Azure Data Factory is for data integration and ETL (extract, transform, load), not analytics."
+  },
+  {
+    "number": 210,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Traffic Manager provides DNS-based traffic distribution",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Traffic Manager is a DNS-based traffic load balancer that distributes traffic optimally across global Azure regions."
+  },
+  {
+    "number": 211,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "Your Azure environment contains multiple Azure virtual machines.\n\nYou need to ensure that a virtual machine named VM1 is accessible from the Internet over HTTP.\n\nWhat are two possible solutions? Each correct answer presents a complete solution.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Modify a DDoS protection plan."
+      },
+      {
+        "label": "B",
+        "text": "Modify an Azure firewall."
+      },
+      {
+        "label": "C",
+        "text": "Modify an Azure Traffic Manager profile."
+      },
+      {
+        "label": "D",
+        "text": "Modify a network security group (NSG)"
+      }
+    ],
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanation": "Azure Firewall can be configured with NAT rules to allow HTTP access. Network security groups can allow inbound HTTP traffic. DDoS protection and Traffic Manager don't control access."
+  },
+  {
+    "number": 212,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Load Balancer distributes network traffic across multiple virtual machines",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Load Balancer distributes incoming network traffic across multiple backend resources or servers to ensure high availability."
+  },
+  {
+    "number": 213,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "You plan to create an Azure virtual machine.\n\nYou need to identify which storage service must be used to store the data disks of the virtual machine.\n\nWhat should you identify? To answer, select the appropriate service in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Blob Storage (Page Blobs) is used to store virtual machine data disks",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure virtual machine disks are stored as page blobs in Azure Blob Storage. Page blobs are optimized for random read and write operations."
+  },
+  {
+    "number": 214,
+    "questionType": "drag-drop",
+    "type": "DRAG DROP",
+    "text": "Match the Azure service to the correct description.\n\nInstructions: To answer, drag the appropriate Azure service from the column on the left to its description on the right. Each service may be used once, more than once, or not at all.",
+    "note": "Each correct match is worth one point.",
+    "leftItems": [
+      "Azure SQL Database",
+      "Azure Cosmos DB",
+      "Azure Table Storage",
+      "Azure Blob Storage"
+    ],
+    "rightItems": [
+      "A relational database service",
+      "A globally distributed NoSQL database",
+      "A NoSQL key-value store",
+      "Object storage for unstructured data"
+    ],
+    "matches": {
+      "Azure SQL Database": "A relational database service",
+      "Azure Cosmos DB": "A globally distributed NoSQL database",
+      "Azure Table Storage": "A NoSQL key-value store",
+      "Azure Blob Storage": "Object storage for unstructured data"
+    },
+    "explanation": "Azure SQL Database is a managed relational database. Cosmos DB is a globally distributed NoSQL service. Table Storage is a key-value NoSQL store. Blob Storage holds unstructured data like files and images."
+  },
+  {
+    "number": 215,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Application Gateway is a load balancer for HTTP and HTTPS traffic",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Load Balancer operates at Layer 4 (Transport layer)",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Application Gateway operates at Layer 7 (Application layer)",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Application Gateway is a web traffic load balancer for HTTP/HTTPS. Load Balancer operates at Layer 4. Application Gateway operates at Layer 7."
+  },
+  {
+    "number": 216,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Functions provides event-driven serverless compute",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Functions is a serverless compute service that runs code in response to events without requiring explicit infrastructure management."
+  },
+  {
+    "number": 217,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Logic Apps provides workflow automation",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Logic Apps is a cloud service that helps you automate workflows and integrate apps, data, services, and systems."
+  },
+  {
+    "number": 218,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Activity Log tracks administrative operations on Azure resources",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Activity Log provides logs of subscription-level events including administrative operations, service health events, and autoscale operations."
+  },
+  {
+    "number": 219,
+    "questionType": "drag-drop",
+    "type": "DRAG DROP",
+    "text": "Match the Azure service to the correct description.\n\nInstructions: To answer, drag the appropriate Azure service from the column on the left to its description on the right. Each service may be used once, more than once, or not at all.",
+    "note": "Each correct match is worth one point.",
+    "leftItems": [
+      "Azure Synapse Analytics",
+      "Azure Data Lake",
+      "Azure Databricks",
+      "Azure HDInsight"
+    ],
+    "rightItems": [
+      "An analytics service that brings together data integration, data warehousing, and big data analytics",
+      "A storage repository for big data analytics",
+      "An Apache Spark-based analytics platform",
+      "A cloud-based big data platform"
+    ],
+    "matches": {
+      "Azure Synapse Analytics": "An analytics service that brings together data integration, data warehousing, and big data analytics",
+      "Azure Data Lake": "A storage repository for big data analytics",
+      "Azure Databricks": "An Apache Spark-based analytics platform",
+      "Azure HDInsight": "A cloud-based big data platform"
+    },
+    "explanation": "Synapse Analytics integrates multiple analytics services. Data Lake provides big data storage. Databricks is Spark-based. HDInsight provides managed Hadoop and Spark clusters."
+  },
+  {
+    "number": 220,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Sentinel is a security information and event management (SIEM) solution",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Sentinel uses artificial intelligence to detect threats",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Sentinel is only available with an Enterprise Agreement",
+        "answer": "No"
+      }
+    ],
+    "explanation": "Azure Sentinel is a cloud-native SIEM. It uses AI and machine learning for threat detection. It's available to all Azure customers, not just EA customers."
+  },
+  {
+    "number": 221,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company has an Azure subscription that contains the following unused resources:\n• 20 user accounts in Azure Active Directory (Azure AD)\n• Five groups in Azure AD\n• 10 public IP addresses\n• 10 network interfaces\n\nYou need to reduce the Azure costs for the company.\n\nWhich unused resources should you remove?",
+    "options": [
+      {
+        "label": "A",
+        "text": "the user accounts"
+      },
+      {
+        "label": "B",
+        "text": "the network interfaces"
+      },
+      {
+        "label": "C",
+        "text": "the public IP addresses"
+      },
+      {
+        "label": "D",
+        "text": "the groups"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Public IP addresses incur charges. User accounts, groups, and network interfaces don't have direct costs associated with them."
+  },
+  {
+    "number": 222,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which task can you perform by using Azure Advisor?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Integrate Active Directory and Azure Active Directory (Azure AD)."
+      },
+      {
+        "label": "B",
+        "text": "Estimate the costs of an Azure solution."
+      },
+      {
+        "label": "C",
+        "text": "Confirm that Azure subscription security follows best practices."
+      },
+      {
+        "label": "D",
+        "text": "Evaluate which on-premises resources can be migrated to Azure."
+      }
+    ],
+    "answer": "C",
+    "explanation": "Azure Advisor provides recommendations on security best practices, cost optimization, performance, reliability, and operational excellence for your Azure resources."
+  },
+  {
+    "number": 223,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "You can create an Azure support request from the Azure portal",
+        "answer": "Yes"
+      },
+      {
+        "text": "You can create an Azure support request by using the Azure mobile app",
+        "answer": "Yes"
+      },
+      {
+        "text": "You can create an Azure support request by using email",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Support requests can be created through the Azure portal, mobile app, and via email support channels depending on your support plan."
+  },
+  {
+    "number": 224,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "In the Public Cloud, multiple organizations share the same physical infrastructure",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "In a public cloud model, multiple tenants (organizations) share the same physical hardware infrastructure, managed by the cloud provider."
+  },
+  {
+    "number": 225,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "After an Azure trial account expires, you cannot start an existing Azure virtual machine",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "When a trial account expires, you cannot start VMs as that would incur compute charges. You need an active paid subscription to start VMs."
+  },
+  {
+    "number": 226,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "High Availability ensures that services remain available during outages",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "High availability refers to the ability of a system to remain operational and accessible with minimal downtime, even during failures."
+  },
+  {
+    "number": 227,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "The delete lock must be removed before an administrator can delete a resource group",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "A delete lock prevents deletion of resources. The lock must be removed before any administrator can delete the protected resource or resource group."
+  },
+  {
+    "number": 228,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Firewall provides network-level protection",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Firewall provides application-level protection",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure DDoS Protection provides protection against distributed denial-of-service attacks",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Firewall operates at both network (Layer 3-4) and application (Layer 7) levels. Azure DDoS Protection specifically defends against DDoS attacks."
+  },
+  {
+    "number": 229,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure SQL Database is a Platform as a Service (PaaS) offering",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure SQL Managed Instance is a Platform as a Service (PaaS) offering",
+        "answer": "Yes"
+      },
+      {
+        "text": "SQL Server on Azure Virtual Machines is a Platform as a Service (PaaS) offering",
+        "answer": "No"
+      }
+    ],
+    "explanation": "Azure SQL Database and SQL Managed Instance are PaaS offerings. SQL Server on Azure VMs is IaaS as you manage the OS and SQL Server installation."
+  },
+  {
+    "number": 230,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure provides unlimited storage capacity",
+        "answer": "No"
+      },
+      {
+        "text": "Azure provides flexible computing resources",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure provides tools to help you manage compliance requirements",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure has storage limits (though very high). It provides flexible, scalable compute resources. Azure includes compliance tools like Policy and Compliance Manager."
+  }
+,
+  {
+    "number": 231,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Elasticity is the ability to automatically scale resources to match demand",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Elasticity refers to the ability to automatically or quickly scale resources up or down based on demand, optimizing resource utilization and costs."
+  },
+  {
+    "number": 232,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Monitor can create alerts based on metrics",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Monitor can create alerts based on log queries",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Monitor alerts can trigger automated actions",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Monitor can create alerts based on metrics and log queries. Alerts can trigger action groups that perform automated responses like running Azure Functions or Logic Apps."
+  },
+  {
+    "number": 233,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Resource Manager templates can be used to deploy Azure resources",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Resource Manager templates are written in XML format",
+        "answer": "No"
+      },
+      {
+        "text": "Azure Resource Manager templates can be version controlled",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "ARM templates deploy Azure resources declaratively. They use JSON format, not XML. Templates can be stored in version control systems like Git."
+  },
+  {
+    "number": 234,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Cosmos DB is an example of a platform as a service (PaaS) cloud database provider",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Cosmos DB is a fully managed PaaS database service where Microsoft manages the infrastructure and you manage the data and applications."
+  },
+  {
+    "number": 235,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Building a data center infrastructure is capital expenditure (CapEx)",
+        "answer": "Yes"
+      },
+      {
+        "text": "Monthly salaries for technical personnel are operational expenditure (OpEx)",
+        "answer": "Yes"
+      },
+      {
+        "text": "Leasing software is operational expenditure (OpEx)",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Building infrastructure requires upfront investment (CapEx). Salaries are ongoing costs (OpEx). Leasing/subscription costs are OpEx, not one-time purchases (CapEx)."
+  },
+  {
+    "number": 236,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "This question requires that you evaluate the underlined text to determine if it is correct.\n\nAn Availability Zone in Azure has physically separate locations across two continents.\n\nInstructions: Review the underlined text. If it makes the statement correct, select 'No change is needed'. If the statement is incorrect, select the answer choice that makes the statement correct.",
+    "options": [
+      {
+        "label": "A",
+        "text": "No change is needed."
+      },
+      {
+        "label": "B",
+        "text": "within a single Azure region"
+      },
+      {
+        "label": "C",
+        "text": "within multiple Azure regions"
+      },
+      {
+        "label": "D",
+        "text": "within a single Azure datacenter"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Availability Zones are unique physical locations within a single Azure region, not across continents or multiple regions. Each zone has independent power, cooling, and networking."
+  },
+  {
+    "number": 237,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Data in the Archive access tier must be rehydrated before it can be accessed",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Archive tier data is offline and must be rehydrated to hot or cool tier before access. Rehydration can take several hours."
+  },
+  {
+    "number": 238,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure resources in a resource group must be in the same region",
+        "answer": "No"
+      },
+      {
+        "text": "Tags for resources are inherited from their resource group by default",
+        "answer": "No"
+      },
+      {
+        "text": "A resource group can be used to scope access control for administrative actions",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Resources in a resource group can be in different regions. Tags are not inherited by default. Resource groups can scope RBAC permissions."
+  },
+  {
+    "number": 239,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "You can assign additional account administrators in the Azure portal",
+        "answer": "Yes"
+      },
+      {
+        "text": "You need a Microsoft account to manage an Azure subscription",
+        "answer": "No"
+      },
+      {
+        "text": "A resource group can contain subscriptions",
+        "answer": "No"
+      }
+    ],
+    "explanation": "You can assign administrators through the portal. Azure AD accounts (not just Microsoft accounts) can manage subscriptions. Subscriptions contain resource groups, not vice versa."
+  },
+  {
+    "number": 240,
+    "questionType": "drag-drop",
+    "type": "DRAG DROP",
+    "text": "Match the Azure Services service to the correct descriptions.\n\nInstructions: To answer, drag the appropriate service from the column on the left to its description on the right. Each service may be used once, more than once, or not at all.",
+    "note": "Each correct match is worth one point.",
+    "leftItems": [
+      "Azure IoT Hub",
+      "Azure IoT Central",
+      "Azure Sphere",
+      "Azure Machine Learning"
+    ],
+    "rightItems": [
+      "A cloud solution for managing IoT devices",
+      "A SaaS solution for IoT",
+      "A secured IoT hardware platform",
+      "A platform for building AI models"
+    ],
+    "matches": {
+      "Azure IoT Hub": "A cloud solution for managing IoT devices",
+      "Azure IoT Central": "A SaaS solution for IoT",
+      "Azure Sphere": "A secured IoT hardware platform",
+      "Azure Machine Learning": "A platform for building AI models"
+    },
+    "explanation": "IoT Hub is a PaaS for device management. IoT Central is a SaaS IoT solution. Azure Sphere is secure hardware. Machine Learning is for building AI models."
+  },
+  {
+    "number": 241,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company has a Software Assurance agreement that includes Microsoft SQL Server licenses.\n\nYou plan to deploy SQL Server on Azure virtual machines.\n\nWhat should you do to minimize licensing costs for the deployment?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Use Azure reservations."
+      },
+      {
+        "label": "B",
+        "text": "Use Azure Hybrid Benefit"
+      },
+      {
+        "label": "C",
+        "text": "Deallocate the virtual machines during off hours."
+      },
+      {
+        "label": "D",
+        "text": "Configure Azure Cost Management budgets."
+      }
+    ],
+    "answer": "B",
+    "explanation": "Azure Hybrid Benefit allows you to use existing on-premises Windows Server and SQL Server licenses with Software Assurance on Azure, significantly reducing costs."
+  },
+  {
+    "number": 242,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which resources can be used as a source for a Network security group inbound security rule?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Application security groups only"
+      },
+      {
+        "label": "B",
+        "text": "IP Addresses only"
+      },
+      {
+        "label": "C",
+        "text": "Service Tags only"
+      },
+      {
+        "label": "D",
+        "text": "IP Addresses, Service tags and Application security groups"
+      }
+    ],
+    "answer": "D",
+    "explanation": "NSG inbound security rules can use IP addresses, service tags (representing groups of IP addresses), and application security groups as sources."
+  },
+  {
+    "number": 243,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure China is operated by Microsoft",
+        "answer": "No"
+      },
+      {
+        "text": "Azure Government is operated by Microsoft",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Germany is operated by Microsoft",
+        "answer": "No"
+      }
+    ],
+    "explanation": "Azure China is operated by 21Vianet. Azure Government is operated by Microsoft. Azure Germany was operated by Deutsche Telekom (now migrated to standard Azure regions)."
+  },
+  {
+    "number": 244,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Policy can enforce compliance standards and assess resource compliance",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Policy is used to create, assign, and manage policies that enforce organizational standards and assess compliance at scale."
+  },
+  {
+    "number": 245,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Site Recovery provides disaster recovery by replicating workloads",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Site Recovery replicates workloads running on VMs and physical servers from a primary site to a secondary location for disaster recovery."
+  },
+  {
+    "number": 246,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "To which cloud models can you deploy physical servers?",
+    "options": [
+      {
+        "label": "A",
+        "text": "private cloud and hybrid cloud only"
+      },
+      {
+        "label": "B",
+        "text": "private cloud only"
+      },
+      {
+        "label": "C",
+        "text": "private cloud, hybrid cloud and public cloud"
+      },
+      {
+        "label": "D",
+        "text": "hybrid cloud only"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Physical servers can be deployed in private cloud (on-premises) and hybrid cloud (which includes on-premises). Public cloud uses virtualized infrastructure managed by the provider."
+  },
+  {
+    "number": 247,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "In which type of cloud model are all the hardware resources owned by a third-party and shared between multiple tenants?",
+    "options": [
+      {
+        "label": "A",
+        "text": "private"
+      },
+      {
+        "label": "B",
+        "text": "hybrid"
+      },
+      {
+        "label": "C",
+        "text": "public"
+      }
+    ],
+    "answer": "C",
+    "explanation": "In a public cloud model, a third-party cloud provider owns and manages the hardware, which is shared among multiple customers (multi-tenancy)."
+  },
+  {
+    "number": 248,
+    "questionType": "drag-drop",
+    "type": "DRAG DROP",
+    "text": "Match the cloud model to the correct advantage.\n\nInstructions: To answer, drag the appropriate cloud model from the column on the left to its advantage on the right. Each cloud model may be used once, more than once, or not at all.",
+    "note": "Each correct match is worth one point.",
+    "leftItems": [
+      "Public Cloud",
+      "Private Cloud",
+      "Hybrid Cloud"
+    ],
+    "rightItems": [
+      "No capital expenditure on server hardware",
+      "Complete control over security",
+      "Choice of deployment location"
+    ],
+    "matches": {
+      "Public Cloud": "No capital expenditure on server hardware",
+      "Private Cloud": "Complete control over security",
+      "Hybrid Cloud": "Choice of deployment location"
+    },
+    "explanation": "Public cloud eliminates hardware CapEx. Private cloud provides full security control. Hybrid cloud offers flexibility in where to deploy resources."
+  },
+  {
+    "number": 249,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What can you use to automatically send an alert if an administrator stops an Azure virtual machine?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Azure Advisor"
+      },
+      {
+        "label": "B",
+        "text": "Azure Service Health"
+      },
+      {
+        "label": "C",
+        "text": "Azure Monitor"
+      },
+      {
+        "label": "D",
+        "text": "Azure Network Watcher"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Azure Monitor can create alerts based on activity log events, including when a VM is stopped. It can send notifications via email, SMS, or trigger automated actions."
+  },
+  {
+    "number": 250,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "You have an Azure environment.\n\nYou need to create a new Azure virtual machine from a tablet that runs the Android operating system.\n\nWhat are three possible solutions? Each correct answer presents a complete solution.",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Use Bash in Azure Cloud Shell."
+      },
+      {
+        "label": "B",
+        "text": "Use PowerShell in Azure Cloud Shell."
+      },
+      {
+        "label": "C",
+        "text": "Use the PowerApps portal."
+      },
+      {
+        "label": "D",
+        "text": "Use the Security & Compliance admin center."
+      },
+      {
+        "label": "E",
+        "text": "Use the Azure portal."
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "E"
+    ],
+    "explanation": "The Azure portal is web-based and accessible from Android. Azure Cloud Shell (both Bash and PowerShell) is also browser-based and can create VMs from Android devices."
+  },
+  {
+    "number": 251,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You plan to deploy several Azure virtual machines.\n\nYou need to ensure that the services running on the virtual machines are available if a single data center fails.\n\nSolution: You deploy the virtual machines to a scale set.\n\nDoes this meet the goal?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Yes"
+      },
+      {
+        "label": "B",
+        "text": "No"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Virtual machine scale sets alone don't guarantee protection from datacenter failures. They must be configured with availability zones or deployed across regions to protect against datacenter failures."
+  },
+  {
+    "number": 252,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company is planning a deployment using Azure Database for PostgreSQL. The deployment should meet the following requirements:\n- Up to 10 TB storage\n- Azure Premium Storage\n- Point-in-time-restore for up to 35 days\n\nYou need to select the appropriate deployment and pricing tier to meet these requirements and minimize costs. What should you select?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Azure Database for PostgreSQL Single Server Memory Optimized tier"
+      },
+      {
+        "label": "B",
+        "text": "Azure Database for PostgreSQL Hyperscale (Citus)"
+      },
+      {
+        "label": "C",
+        "text": "Azure Database for PostgreSQL Single Server General Purpose tier"
+      },
+      {
+        "label": "D",
+        "text": "Azure Database for PostgreSQL Single Server Basic tier"
+      }
+    ],
+    "answer": "C",
+    "explanation": "The General Purpose tier supports up to 16 TB storage, Premium Storage, and point-in-time restore up to 35 days, meeting all requirements at a lower cost than Memory Optimized."
+  },
+  {
+    "number": 253,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company uses management groups to manage resources in your Azure tenant more efficiently.\n\nUser1 should be able to assign access and assign policies to management groups.\n\nYou need to determine to which role-based access control (RBAC) role User1 should be added.\n\nYour solution should follow the principle of least privilege. To which role should you add User1?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Owner"
+      },
+      {
+        "label": "B",
+        "text": "User Access Administrator"
+      },
+      {
+        "label": "C",
+        "text": "Management Group Contributor"
+      },
+      {
+        "label": "D",
+        "text": "Contributor"
+      }
+    ],
+    "answer": "B",
+    "explanation": "User Access Administrator can assign access (RBAC permissions) and has the ability to manage policies on management groups, following least privilege principle better than Owner."
+  },
+  {
+    "number": 254,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "A team has an Azure Cosmos DB account. A solution needs to be in place to generate an alert from Azure Log Analytics when a query request charge exceeds 40 units more than 10 times during a 10-minute window.\n\nWhich of the following would you recommend? (Choose two)",
+    "options": [
+      {
+        "label": "A",
+        "text": "Create a search query to identify when the requestCharge_s exceeds 10."
+      },
+      {
+        "label": "B",
+        "text": "Configure a period of 10 and a frequency of 10."
+      },
+      {
+        "label": "C",
+        "text": "Create a search query to identify when the requestCharge_s exceeds 40."
+      },
+      {
+        "label": "D",
+        "text": "Create a search query to identify when the duration_s exceeds 10."
+      }
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanation": "The search query should check for requestCharge_s exceeding 40. The alert should be configured with a 10-minute period and frequency to match the requirement."
+  },
+  {
+    "number": 255,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which service provides network traffic filtering across multiple Azure subscriptions and virtual networks?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Azure Firewall"
+      },
+      {
+        "label": "B",
+        "text": "an application security group"
+      },
+      {
+        "label": "C",
+        "text": "Azure DDoS protection"
+      },
+      {
+        "label": "D",
+        "text": "a network security group (NSG)"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Azure Firewall is a managed network security service that can protect resources across multiple virtual networks and subscriptions. A single Azure Firewall can secure multiple VNets."
+  },
+  {
+    "number": 256,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "A company is planning on deploying a stateless based application based on microservices using the Azure Service Fabric service. You need to design the infrastructure that would be required in the Azure Service Fabric service.\n\nWhich of the following should you consider? (Choose two)",
+    "options": [
+      {
+        "label": "A",
+        "text": "The network connectivity"
+      },
+      {
+        "label": "B",
+        "text": "The number of node types in the cluster"
+      },
+      {
+        "label": "C",
+        "text": "The properties for each node type"
+      },
+      {
+        "label": "D",
+        "text": "The service tier"
+      }
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanation": "When designing Azure Service Fabric infrastructure, you need to consider the number of node types required and the properties (VM size, count, etc.) for each node type."
+  },
+  {
+    "number": 257,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What should you use to evaluate whether your company's Azure environment meets regulatory requirements?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Microsoft Defender for Cloud"
+      },
+      {
+        "label": "B",
+        "text": "Azure Advisor"
+      },
+      {
+        "label": "C",
+        "text": "Azure Service Health"
+      },
+      {
+        "label": "D",
+        "text": "Azure Knowledge Center"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Microsoft Defender for Cloud (formerly Azure Security Center) includes a regulatory compliance dashboard that evaluates your environment against various compliance standards."
+  },
+  {
+    "number": 258,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true, Otherwise, select No.",
+    "note": "Each correct match is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Key Vault can store passwords",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Key Vault can store encryption keys",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Key Vault can store digital certificates",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Key Vault is designed to securely store and manage passwords (secrets), encryption keys, and digital certificates with access control and auditing."
+  },
+  {
+    "number": 259,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true, Otherwise, select No.",
+    "note": "Each correct match is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Backup can back up Azure virtual machines",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Backup can back up on-premises Windows servers",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Backup can back up on-premises Linux servers",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Backup supports backing up Azure VMs, on-premises Windows servers, and on-premises Linux servers using the appropriate agents."
+  },
+  {
+    "number": 260,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure ExpressRoute provides a private dedicated connection between on-premises and Azure",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure ExpressRoute creates private connections between Azure datacenters and on-premises infrastructure, not going over the public internet."
+  }
+,
+  {
+    "number": 261,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an azure virtual machine named VM1.\n\nYou plan to encrypt VM1 by using Azure Disk Encryption.\n\nWhich Azure resource must you create first?",
+    "options": [
+      {
+        "label": "A",
+        "text": "An Azure Storage account"
+      },
+      {
+        "label": "B",
+        "text": "An Azure Information Protection policy"
+      },
+      {
+        "label": "C",
+        "text": "An Encryption Key"
+      },
+      {
+        "label": "D",
+        "text": "An Azure Key Vault"
+      }
+    ],
+    "answer": "D",
+    "explanation": "Azure Disk Encryption requires an Azure Key Vault to store and manage the disk encryption keys and secrets used to encrypt the virtual machine disks."
+  },
+  {
+    "number": 262,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Virtual Network allows Azure resources to communicate with each other securely",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Virtual Network enables Azure resources to securely communicate with each other, the internet, and on-premises networks."
+  },
+  {
+    "number": 263,
+    "questionType": "drag-drop",
+    "type": "DRAG DROP",
+    "text": "Match the term to the appropriate description.\n\nTo answer, drag the appropriate term from the column on the left to its description on the right. Each term may be used once, more than once, or not at all.",
+    "note": "Each correct match is worth one point.",
+    "leftItems": [
+      "Agility",
+      "Scalability",
+      "Elasticity",
+      "High Availability"
+    ],
+    "rightItems": [
+      "The ability to rapidly develop, test, and launch applications",
+      "The ability to increase resources to handle load",
+      "The ability to automatically scale resources",
+      "The ability to ensure services remain available"
+    ],
+    "matches": {
+      "Agility": "The ability to rapidly develop, test, and launch applications",
+      "Scalability": "The ability to increase resources to handle load",
+      "Elasticity": "The ability to automatically scale resources",
+      "High Availability": "The ability to ensure services remain available"
+    },
+    "explanation": "Agility enables rapid deployment. Scalability allows resource growth. Elasticity automatically adjusts resources. High availability ensures uptime."
+  },
+  {
+    "number": 264,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true, Otherwise, select No.",
+    "note": "Each correct match is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Virtual Desktop provides a desktop experience in the cloud",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Virtual Desktop supports Windows 10 multi-session",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Virtual Desktop requires licenses for Windows 10",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Virtual Desktop provides cloud-based desktop and application virtualization. It supports Windows 10 multi-session. Appropriate licenses are required."
+  },
+  {
+    "number": 265,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure App Service is a Platform as a Service (PaaS) offering",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure App Service is a PaaS offering that enables you to build and host web apps, mobile back ends, and RESTful APIs without managing infrastructure."
+  },
+  {
+    "number": 266,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What can you use to identify underutilized or unused Azure virtual machines?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Azure Advisor"
+      },
+      {
+        "label": "B",
+        "text": "Azure Cost Management + Billing"
+      },
+      {
+        "label": "C",
+        "text": "Azure reservations"
+      },
+      {
+        "label": "D",
+        "text": "Azure Policy"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Azure Advisor provides recommendations including identifying underutilized or idle virtual machines to help optimize costs and improve resource efficiency."
+  },
+  {
+    "number": 267,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true, Otherwise, select No.",
+    "note": "Each correct match is worth one point.",
+    "statements": [
+      {
+        "text": "Azure supports hybrid cloud scenarios",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Arc extends Azure management to on-premises and multi-cloud environments",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Stack allows you to run Azure services in your datacenter",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure supports hybrid cloud. Azure Arc extends management capabilities. Azure Stack brings Azure services on-premises."
+  },
+  {
+    "number": 268,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Bastion provides secure RDP and SSH connectivity without exposing public IP addresses",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Bastion provides secure and seamless RDP/SSH connectivity to virtual machines directly through the Azure portal without requiring public IP addresses."
+  },
+  {
+    "number": 269,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true, Otherwise, select No.",
+    "note": "Each correct match is worth one point.",
+    "statements": [
+      {
+        "text": "You can use Azure Cost Management to view costs by resource",
+        "answer": "Yes"
+      },
+      {
+        "text": "You can use Azure Cost Management to forecast future costs",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Cost Management is available to all Azure customers",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Cost Management allows viewing costs by resource, forecasting future costs, and is available to all Azure customers with supported subscription types."
+  },
+  {
+    "number": 270,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure provides SLA guarantees for all services",
+        "answer": "No"
+      },
+      {
+        "text": "The Azure SLA for Virtual Machines requires at least two instances in an availability set",
+        "answer": "Yes"
+      },
+      {
+        "text": "SLA percentages represent uptime guarantees",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Not all services have SLAs (e.g., preview services). VM SLAs require multiple instances for higher uptime guarantees. SLA percentages indicate guaranteed uptime."
+  },
+  {
+    "number": 271,
+    "questionType": "drag-drop",
+    "type": "DRAG DROP",
+    "text": "Match the cloud computing benefits to the correct descriptions.\n\nTo answer, drag the appropriate service from the column on the left to its description on the right. Each service may be used once, more than once, or not at all.",
+    "note": "Each correct match is worth one point.",
+    "leftItems": [
+      "High Availability",
+      "Scalability",
+      "Elasticity",
+      "Disaster Recovery"
+    ],
+    "rightItems": [
+      "Services remain available with minimal downtime",
+      "Ability to increase capacity",
+      "Automatic resource adjustment",
+      "Ability to recover from failures"
+    ],
+    "matches": {
+      "High Availability": "Services remain available with minimal downtime",
+      "Scalability": "Ability to increase capacity",
+      "Elasticity": "Automatic resource adjustment",
+      "Disaster Recovery": "Ability to recover from failures"
+    },
+    "explanation": "High availability ensures uptime. Scalability increases capacity. Elasticity adjusts resources automatically. Disaster recovery enables restoration after failures."
+  },
+  {
+    "number": 272,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "You plan to use Azure to host two apps named App1 and App2. The apps must meet the following requirements:\n\nYou must be able to modify the code of App1.\nAdministrative effort to manage the operating system of App1 must be minimized.\nApp2 must run interactively with the operating system of the server.\n\nWhich type of cloud service should you use for each app?",
+    "statements": [
+      {
+        "text": "App1: Platform as a Service (PaaS)",
+        "answer": "Yes"
+      },
+      {
+        "text": "App2: Infrastructure as a Service (IaaS)",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "PaaS minimizes OS management while allowing code modification. IaaS provides full OS access for interactive scenarios."
+  },
+  {
+    "number": 273,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "When planning to migrate a public website to Azure, you must plan to pay monthly usage costs",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure uses a pay-as-you-go model, so you pay monthly usage costs based on the resources consumed by your website."
+  },
+  {
+    "number": 274,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Software as a Service (SaaS) provides full control over the application",
+        "answer": "No"
+      },
+      {
+        "text": "Infrastructure as a Service (IaaS) provides the most control over cloud resources",
+        "answer": "Yes"
+      },
+      {
+        "text": "Platform as a Service (PaaS) requires management of the operating system",
+        "answer": "No"
+      }
+    ],
+    "explanation": "SaaS provides limited control (just app settings). IaaS provides the most control. PaaS doesn't require OS management."
+  },
+  {
+    "number": 275,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Availability Zones protect against datacenter failures within an Azure region",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Availability Zones are physically separate locations within an Azure region that protect applications and data from datacenter failures."
+  },
+  {
+    "number": 276,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "A resource can exist in only one resource group",
+        "answer": "Yes"
+      },
+      {
+        "text": "Each resource can exist in only one resource group",
+        "answer": "Yes"
+      },
+      {
+        "text": "Resources from multiple regions can be placed in a single resource group",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Each resource can only be in one resource group at a time. However, a resource group can contain resources from any Azure region."
+  },
+  {
+    "number": 277,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure Storage provides different access tiers to optimize costs",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Storage offers hot, cool, and archive access tiers to optimize costs based on how frequently data is accessed."
+  },
+  {
+    "number": 278,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company has an Azure subscription that contains resources in several regions.\n\nYou need to ensure that administrators can only create resources in those regions.\n\nWhat should you use?",
+    "options": [
+      {
+        "label": "A",
+        "text": "a read-only lock"
+      },
+      {
+        "label": "B",
+        "text": "an Azure policy"
+      },
+      {
+        "label": "C",
+        "text": "a management group"
+      },
+      {
+        "label": "D",
+        "text": "a reservation"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Azure Policy can enforce rules such as allowed locations for resources. You can create a policy that restricts resource creation to specific regions."
+  },
+  {
+    "number": 279,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "The Microsoft Privacy Statement explains what personal data Microsoft processes and how Microsoft processes it",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "The Microsoft Privacy Statement provides transparency about data collection, processing, and usage practices across Microsoft services."
+  },
+  {
+    "number": 280,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "To implement Azure Multi-Factor Authentication, you must deploy a federation solution",
+        "answer": "No"
+      },
+      {
+        "text": "Valid methods for Azure Multi-Factor Authentication include phone call and text message",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Multi-Factor Authentication can be required for all users",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "MFA doesn't require federation. Valid methods include phone, SMS, and app notifications. MFA can be enforced for all users through policies."
+  },
+  {
+    "number": 281,
+    "questionType": "drag-drop",
+    "type": "DRAG DROP",
+    "text": "Match the Azure Services service to the correct description.\n\nInstructions: To answer, drag the appropriate service from the column on the left to its description on the right. Each service may be used once, more than once, or not at all.",
+    "note": "Each correct selection is worth one point.",
+    "leftItems": [
+      "Azure Sphere",
+      "Azure IoT Central",
+      "Azure IoT Hub"
+    ],
+    "rightItems": [
+      "Provides end-to-end security for IoT devices",
+      "A SaaS IoT solution",
+      "A PaaS solution for IoT device management"
+    ],
+    "matches": {
+      "Azure Sphere": "Provides end-to-end security for IoT devices",
+      "Azure IoT Central": "A SaaS IoT solution",
+      "Azure IoT Hub": "A PaaS solution for IoT device management"
+    },
+    "explanation": "Azure Sphere is a secure IoT platform with hardware, OS, and cloud components. IoT Central is a SaaS solution. IoT Hub is a PaaS for device connectivity."
+  },
+  {
+    "number": 282,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You need to be notified when Microsoft plans to perform maintenance that can affect the resources deployed to an Azure subscription.\n\nWhat should you use?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Azure Monitor"
+      },
+      {
+        "label": "B",
+        "text": "Azure Service Health"
+      },
+      {
+        "label": "C",
+        "text": "Azure Advisor"
+      },
+      {
+        "label": "D",
+        "text": "Microsoft Trust Center"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Azure Service Health provides personalized alerts and guidance about Azure service issues, planned maintenance, and health advisories that affect your resources."
+  },
+  {
+    "number": 283,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Microsoft Defender for Cloud can track compliance over time",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Microsoft Defender for Cloud provides compliance tracking capabilities, allowing you to monitor and improve your compliance posture over time."
+  },
+  {
+    "number": 284,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Network Security Groups filter traffic based on IP address, port, and protocol",
+        "answer": "Yes"
+      },
+      {
+        "text": "Network Security Groups can be associated with subnets",
+        "answer": "Yes"
+      },
+      {
+        "text": "Network Security Groups can be associated with network interfaces",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "NSGs filter traffic using 5-tuple rules (source/destination IP, port, protocol). They can be associated with subnets and network interfaces."
+  },
+  {
+    "number": 285,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "SLAs vary based on the service tier",
+        "answer": "Yes"
+      },
+      {
+        "text": "Deploying resources across multiple regions can increase the SLA",
+        "answer": "Yes"
+      },
+      {
+        "text": "The number of Azure subscriptions affects SLA guarantees",
+        "answer": "No"
+      }
+    ],
+    "explanation": "SLAs differ by service tier. Multi-region deployment typically increases uptime guarantees. The number of subscriptions doesn't affect SLAs."
+  },
+  {
+    "number": 286,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "To complete the sentence, select the appropriate option in the answer area.",
+    "statements": [
+      {
+        "text": "Azure services in public preview are excluded from Service Level Agreements",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Preview services, whether private or public, are excluded from SLAs and may have limited or no support guarantees."
+  },
+  {
+    "number": 287,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "Select the answer that correctly completes the sentence.",
+    "statements": [
+      {
+        "text": "Azure Policy ensures compliance by preventing or auditing non-compliant resource configurations",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Policy can enforce compliance by denying non-compliant resource creation or auditing existing resources for compliance violations."
+  },
+  {
+    "number": 288,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "Select the answer that correctly completes the sentence.",
+    "statements": [
+      {
+        "text": "Azure Resource Manager provides a management layer for creating, updating, and deleting resources",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Resource Manager is the deployment and management service that provides a consistent management layer for Azure resources."
+  },
+  {
+    "number": 289,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which Azure service can you use as a security information and event management (SIEM) solution?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Azure Analysis Services"
+      },
+      {
+        "label": "B",
+        "text": "Azure Cognitive Services"
+      },
+      {
+        "label": "C",
+        "text": "Azure Sentinel"
+      },
+      {
+        "label": "D",
+        "text": "Azure information Protection"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Azure Sentinel is Microsoft's cloud-native SIEM and SOAR (Security Orchestration Automated Response) solution that provides intelligent security analytics."
+  },
+  {
+    "number": 290,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "Select the answer that correctly completes the sentence.",
+    "statements": [
+      {
+        "text": "Azure Container Instances provides a way to run containers without managing virtual machines",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Container Instances offers the fastest and simplest way to run containers in Azure without managing VMs or adopting additional services."
+  },
+  {
+    "number": 291,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "Select the answer that correctly completes the sentence.",
+    "statements": [
+      {
+        "text": "Azure Kubernetes Service (AKS) is a managed Kubernetes service",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Kubernetes Service (AKS) is a managed container orchestration service based on Kubernetes that simplifies deploying and managing containerized applications."
+  },
+  {
+    "number": 292,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company plans to migrate all its data and resources to Azure.\n\nThe company's migration plan states that only Platform as a Service (PaaS) solutions must be used in Azure.\n\nYou need to deploy an Azure environment that meets the company migration plan.\n\nWhat should you create?",
+    "options": [
+      {
+        "label": "A",
+        "text": "an Azure App Service and Azure SQL databases"
+      },
+      {
+        "label": "B",
+        "text": "Azure storage accounts and web server in Azure virtual machines"
+      },
+      {
+        "label": "C",
+        "text": "Azure virtual machines, Azure SQL databases, and Azure Storage accounts"
+      },
+      {
+        "label": "D",
+        "text": "an Azure App Service and Azure virtual machines that have Microsoft SQL Server installed"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Azure App Service and Azure SQL databases are both PaaS offerings. Virtual machines are IaaS, so options including VMs don't meet the PaaS-only requirement."
+  },
+  {
+    "number": 293,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Who can use the Azure Total Cost of Ownership (TCO) calculator?",
+    "options": [
+      {
+        "label": "A",
+        "text": "owners for an Azure subscription only"
+      },
+      {
+        "label": "B",
+        "text": "all users who have an account in Azure Active Directory (Azure AD) that is linked to an Azure subscription only"
+      },
+      {
+        "label": "C",
+        "text": "anyone"
+      },
+      {
+        "label": "D",
+        "text": "billing readers for an Azure subscription only"
+      }
+    ],
+    "answer": "C",
+    "explanation": "The Azure TCO calculator is a public tool available to anyone on the internet. It doesn't require an Azure subscription or account to use."
+  },
+  {
+    "number": 294,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "The Azure Pricing Calculator can estimate monthly costs",
+        "answer": "Yes"
+      },
+      {
+        "text": "The Azure Pricing Calculator provides cost estimates for all Azure services",
+        "answer": "Yes"
+      },
+      {
+        "text": "The Azure Pricing Calculator requires an Azure subscription to use",
+        "answer": "No"
+      }
+    ],
+    "explanation": "The Pricing Calculator estimates monthly costs for Azure services. It covers all Azure services. It's publicly available without requiring a subscription."
+  },
+  {
+    "number": 295,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an accounting application named App1 that uses a legacy database.\n\nYou plan to move App1 to the cloud.\n\nWhich service model should you use?",
+    "options": [
+      {
+        "label": "A",
+        "text": "software as a service (SaaS)"
+      },
+      {
+        "label": "B",
+        "text": "infrastructure as a service (IaaS)"
+      },
+      {
+        "label": "C",
+        "text": "platform as a service (PaaS)"
+      }
+    ],
+    "answer": "B",
+    "explanation": "For legacy applications with specific database requirements, IaaS is typically the best option as it provides full control over the environment, OS, and application configuration."
+  },
+  {
+    "number": 296,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is the longest term you can purchase for Azure Reserved VM Instances?",
+    "options": [
+      {
+        "label": "A",
+        "text": "three years"
+      },
+      {
+        "label": "B",
+        "text": "four years"
+      },
+      {
+        "label": "C",
+        "text": "one year"
+      },
+      {
+        "label": "D",
+        "text": "five years"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Azure Reserved VM Instances can be purchased for one-year or three-year terms. The three-year option provides the maximum discount."
+  },
+  {
+    "number": 297,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "You need to manage containers.\n\nWhich two services can you use? Each correct answer presents a complete solution.",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Azure Virtual Desktop"
+      },
+      {
+        "label": "B",
+        "text": "Azure virtual machines"
+      },
+      {
+        "label": "C",
+        "text": "Azure Functions"
+      },
+      {
+        "label": "D",
+        "text": "Azure Kubernetes Service (AKS)"
+      },
+      {
+        "label": "E",
+        "text": "Azure Container Instances"
+      }
+    ],
+    "answer": [
+      "D",
+      "E"
+    ],
+    "explanation": "Azure Kubernetes Service (AKS) and Azure Container Instances are both designed specifically for managing and running containers in Azure."
+  },
+  {
+    "number": 298,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "Select the answer that correctly completes the sentence.",
+    "statements": [
+      {
+        "text": "Azure Blob Storage is used for storing unstructured data such as text and binary data",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Blob Storage is optimized for storing massive amounts of unstructured data including text, binary data, images, videos, and backups."
+  },
+  {
+    "number": 299,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "Select the answer that correctly completes the sentence.",
+    "statements": [
+      {
+        "text": "Azure Files provides managed file shares accessible via SMB protocol",
+        "answer": "Yes"
+      }
+    ],
+    "explanation": "Azure Files offers fully managed file shares in the cloud accessible via Server Message Block (SMB) and NFS protocols."
+  },
+  {
+    "number": 300,
+    "questionType": "hotspot",
+    "type": "HOTSPOT",
+    "text": "For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "note": "Each correct selection is worth one point.",
+    "statements": [
+      {
+        "text": "Azure Active Directory (Azure AD) provides identity and access management",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Active Directory (Azure AD) supports multi-factor authentication",
+        "answer": "Yes"
+      },
+      {
+        "text": "Azure Active Directory (Azure AD) is a network security service",
+        "answer": "No"
+      }
+    ],
+    "explanation": "Azure AD provides identity and access management services. It supports MFA for enhanced security. It's an identity service, not a network security service."
+  }
+]

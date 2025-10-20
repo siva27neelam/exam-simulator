@@ -57,6 +57,23 @@
             font-size: 14px;
         }
 
+        .btn-restart {
+            background: #e53e3e;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-restart:hover {
+            background: #c53030;
+            transform: translateY(-2px);
+        }
+
         .loading {
             text-align: center;
             padding: 60px 20px;
@@ -75,6 +92,85 @@
 
         .content {
             padding: 40px;
+        }
+
+        /* Welcome Screen */
+        .welcome-screen {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .welcome-screen h2 {
+            font-size: 32px;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+
+        .welcome-screen p {
+            font-size: 18px;
+            color: #4a5568;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .welcome-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-welcome {
+            padding: 16px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 200px;
+        }
+
+        .btn-start {
+            background: #48bb78;
+            color: white;
+        }
+
+        .btn-start:hover {
+            background: #38a169;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
+        }
+
+        .btn-resume {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-resume:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .progress-info {
+            background: #e6f0ff;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .progress-info h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .progress-info p {
+            color: #4a5568;
+            font-size: 16px;
+            margin: 5px 0;
         }
 
         .question-section {
@@ -463,6 +559,10 @@
             .btn {
                 width: 100%;
             }
+
+            .welcome-buttons {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -478,6 +578,9 @@
             <div class="question-counter">
                 Question <span id="currentQ">-</span> of <span id="totalQ">-</span>
             </div>
+            <button class="btn-restart" id="restartBtn" style="display: none;">
+                Restart
+            </button>
         </div>
     </div>
 
@@ -491,9 +594,11 @@
     let currentQuestion = 0;
     let showingAnswer = false;
     let userAnswers = {};
-const jsonFiles = ['questions-1.json'];
+    const jsonFiles = ['questions-2.json'];
+    const STORAGE_KEY = 'az900_progress';
+
     // Load questions from JSON file
-async function loadQuestions() {
+    async function loadQuestions() {
         try {
             // Fetch all files in parallel
             const responses = await Promise.all(
@@ -506,17 +611,17 @@ async function loadQuestions() {
             );
 
             // Merge all questions arrays into one
-            questions = responses.flat();  // Combines arrays: [q1, q2] + [q3, q4] = [q1, q2, q3, q4]
+            questions = responses.flat();
 
-            // Optional: Sort by 'number' if your questions have overlapping or out-of-order numbers
+            // Sort by 'number' if your questions have overlapping or out-of-order numbers
             questions.sort((a, b) => a.number - b.number);
 
-            // Optional: Renumber questions sequentially (if needed)
+            // Renumber questions sequentially
             questions.forEach((q, index) => {
                 q.number = index + 1;
             });
 
-            renderQuestion();
+            showWelcomeScreen();
         } catch (error) {
             document.getElementById('content').innerHTML = `
                 <div class="error">
@@ -530,10 +635,101 @@ async function loadQuestions() {
         }
     }
 
+    // Show welcome screen with start/resume options
+    function showWelcomeScreen() {
+        const savedProgress = getSavedProgress();
+        const hasProgress = savedProgress && savedProgress.currentQuestion > 0;
+
+        let progressInfoHTML = '';
+        if (hasProgress) {
+            const progress = savedProgress.currentQuestion + 1;
+            const percentage = Math.round((progress / questions.length) * 100);
+            progressInfoHTML = `
+                <div class="progress-info">
+                    <h3>📚 Saved Progress Found</h3>
+                    <p><strong>Last Question:</strong> ${progress} of ${questions.length}</p>
+                    <p><strong>Progress:</strong> ${percentage}% complete</p>
+                    <p><strong>Last Accessed:</strong> ${new Date(savedProgress.timestamp).toLocaleString()}</p>
+                </div>
+            `;
+        }
+
+        document.getElementById('content').innerHTML = `
+            <div class="welcome-screen">
+                <h2>Welcome to AZ-900 Exam Simulator</h2>
+                <p>
+                    This simulator contains ${questions.length} practice questions to help you prepare for the
+                    Microsoft Azure Fundamentals certification exam.
+                </p>
+                ${progressInfoHTML}
+                <div class="welcome-buttons">
+                    <button class="btn-welcome btn-start" onclick="startFromBeginning()">
+                        Start from Beginning
+                    </button>
+                    ${hasProgress ? `
+                        <button class="btn-welcome btn-resume" onclick="resumeProgress()">
+                            Resume from Question ${savedProgress.currentQuestion + 1}
+                        </button>
+                    ` : ''}
+                </div>
+            </div>
+        `;
+    }
+
+    // Start from beginning
+    function startFromBeginning() {
+        currentQuestion = 0;
+        clearSavedProgress();
+        document.getElementById('restartBtn').style.display = 'block';
+        renderQuestion();
+    }
+
+    // Resume from saved progress
+    function resumeProgress() {
+        const savedProgress = getSavedProgress();
+        if (savedProgress) {
+            currentQuestion = savedProgress.currentQuestion;
+        }
+        document.getElementById('restartBtn').style.display = 'block';
+        renderQuestion();
+    }
+
+    // Save progress to localStorage
+    function saveProgress() {
+        const progress = {
+            currentQuestion: currentQuestion,
+            timestamp: new Date().toISOString()
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    }
+
+    // Get saved progress from localStorage
+    function getSavedProgress() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        return saved ? JSON.parse(saved) : null;
+    }
+
+    // Clear saved progress
+    function clearSavedProgress() {
+        localStorage.removeItem(STORAGE_KEY);
+    }
+
+    // Restart functionality
+    function restartExam() {
+        if (confirm('Are you sure you want to restart from the beginning? Your current progress will be lost.')) {
+            currentQuestion = 0;
+            clearSavedProgress();
+            renderQuestion();
+        }
+    }
+
     function renderQuestion() {
         const q = questions[currentQuestion];
         showingAnswer = false;
         userAnswers = {};
+
+        // Save progress whenever we render a new question
+        saveProgress();
 
         document.getElementById('currentQ').textContent = currentQuestion + 1;
         document.getElementById('totalQ').textContent = questions.length;
@@ -792,7 +988,10 @@ async function loadQuestions() {
             currentQuestion++;
             renderQuestion();
         } else {
+            // Exam completed
+            clearSavedProgress();
             alert(`Congratulations! You've completed all ${questions.length} questions!`);
+            showWelcomeScreen();
         }
     }
 
@@ -813,6 +1012,9 @@ async function loadQuestions() {
             }
         }
     });
+
+    // Restart button event listener
+    document.getElementById('restartBtn').addEventListener('click', restartExam);
 
     // Initialize
     loadQuestions();
