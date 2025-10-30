@@ -48,6 +48,32 @@
             display: flex;
             gap: 15px;
             align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .file-selector {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .file-selector label {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .file-selector select {
+            background: white;
+            color: #2d3748;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
         }
 
         .question-counter {
@@ -94,7 +120,6 @@
             padding: 40px;
         }
 
-        /* Welcome Screen */
         .welcome-screen {
             text-align: center;
             padding: 60px 20px;
@@ -222,7 +247,6 @@
             color: #2d3748;
         }
 
-        /* Statement Table (Yes/No) */
         .statement-table {
             width: 100%;
             border-collapse: collapse;
@@ -260,12 +284,12 @@
             line-height: 1.5;
         }
 
-        .radio-group, .checkbox-group {
+        .radio-group {
             display: flex;
             gap: 20px;
         }
 
-        .radio-option, .checkbox-option {
+        .radio-option {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -275,36 +299,31 @@
             transition: background 0.2s;
         }
 
-        .radio-option:hover, .checkbox-option:hover {
+        .radio-option:hover {
             background: #f7fafc;
         }
 
-        .radio-option input[type="radio"],
-        .checkbox-option input[type="checkbox"] {
+        .radio-option input[type="radio"] {
             width: 18px;
             height: 18px;
             cursor: pointer;
         }
 
-        .radio-option label,
-        .checkbox-option label {
+        .radio-option label {
             cursor: pointer;
             font-weight: 500;
             user-select: none;
         }
 
-        .radio-option.correct-answer,
-        .checkbox-option.correct-answer {
+        .radio-option.correct-answer {
             background: #d4edda;
         }
 
-        .radio-option.correct-answer label,
-        .checkbox-option.correct-answer label {
+        .radio-option.correct-answer label {
             color: #28a745;
             font-weight: 600;
         }
 
-        /* Multiple Choice Options */
         .options {
             margin-bottom: 30px;
         }
@@ -358,7 +377,6 @@
             line-height: 1.5;
         }
 
-        /* Drag and Drop */
         .drag-drop-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -430,7 +448,6 @@
             border-color: #dc3545;
         }
 
-        /* Answer Section */
         .answer-section {
             background: #f7fafc;
             border-radius: 8px;
@@ -533,20 +550,6 @@
             transition: width 0.3s;
         }
 
-        .answer-indicator {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-left: 10px;
-        }
-
-        .answer-indicator.correct {
-            background: #d4edda;
-            color: #28a745;
-        }
-
         @media (max-width: 768px) {
             .drag-drop-container {
                 grid-template-columns: 1fr;
@@ -575,6 +578,16 @@
     <div class="header">
         <h1>AZ-900 Exam Simulator</h1>
         <div class="header-right">
+            <div class="file-selector">
+                <label>File:</label>
+                <select id="fileSelector">
+                    <option value="questions-1.json">Set 1</option>
+                    <option value="questions-2.json" selected>Set 2</option>
+                    <option value="questions-3.json">Set 3</option>
+                    <option value="questions-4.json">Set 4</option>
+                    <option value="questions-5.json">Set 5</option>
+                </select>
+            </div>
             <div class="question-counter">
                 Question <span id="currentQ">-</span> of <span id="totalQ">-</span>
             </div>
@@ -594,29 +607,24 @@
     let currentQuestion = 0;
     let showingAnswer = false;
     let userAnswers = {};
-    const jsonFiles = ['questions-2.json'];
-    const STORAGE_KEY = 'az900_progress';
+    let currentFile = 'questions-2.json';
+    const STORAGE_KEY_PREFIX = 'az900_progress_';
 
-    // Load questions from JSON file
-    async function loadQuestions() {
+    function getStorageKey() {
+        return STORAGE_KEY_PREFIX + currentFile.replace('.json', '');
+    }
+
+    async function loadQuestions(filename = currentFile) {
         try {
-            // Fetch all files in parallel
-            const responses = await Promise.all(
-                jsonFiles.map(file => fetch(file).then(res => {
-                    if (!res.ok) {
-                        throw new Error(`Failed to load ${file}`);
-                    }
-                    return res.json();
-                }))
-            );
+            currentFile = filename;
+            const response = await fetch(filename);
 
-            // Merge all questions arrays into one
-            questions = responses.flat();
+            if (!response.ok) {
+                throw new Error(`Failed to load ${filename}`);
+            }
 
-            // Sort by 'number' if your questions have overlapping or out-of-order numbers
+            questions = await response.json();
             questions.sort((a, b) => a.number - b.number);
-
-            // Renumber questions sequentially
             questions.forEach((q, index) => {
                 q.number = index + 1;
             });
@@ -625,9 +633,9 @@
         } catch (error) {
             document.getElementById('content').innerHTML = `
                 <div class="error">
-                    <strong>Error:</strong> Could not load questions.
+                    <strong>Error:</strong> Could not load questions from ${filename}.
                     <br><br>
-                    Make sure you're running this through a web server and that all JSON files are in the same directory.
+                    Make sure you're running this through a web server and that the JSON file is in the same directory.
                     <br><br>
                     Error details: ${error.message}
                 </div>
@@ -635,7 +643,6 @@
         }
     }
 
-    // Show welcome screen with start/resume options
     function showWelcomeScreen() {
         const savedProgress = getSavedProgress();
         const hasProgress = savedProgress && savedProgress.currentQuestion > 0;
@@ -676,7 +683,6 @@
         `;
     }
 
-    // Start from beginning
     function startFromBeginning() {
         currentQuestion = 0;
         clearSavedProgress();
@@ -684,7 +690,6 @@
         renderQuestion();
     }
 
-    // Resume from saved progress
     function resumeProgress() {
         const savedProgress = getSavedProgress();
         if (savedProgress) {
@@ -694,27 +699,24 @@
         renderQuestion();
     }
 
-    // Save progress to localStorage
     function saveProgress() {
         const progress = {
             currentQuestion: currentQuestion,
-            timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString(),
+            file: currentFile
         };
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+        localStorage.setItem(getStorageKey(), JSON.stringify(progress));
     }
 
-    // Get saved progress from localStorage
     function getSavedProgress() {
-        const saved = localStorage.getItem(STORAGE_KEY);
+        const saved = localStorage.getItem(getStorageKey());
         return saved ? JSON.parse(saved) : null;
     }
 
-    // Clear saved progress
     function clearSavedProgress() {
-        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(getStorageKey());
     }
 
-    // Restart functionality
     function restartExam() {
         if (confirm('Are you sure you want to restart from the beginning? Your current progress will be lost.')) {
             currentQuestion = 0;
@@ -728,7 +730,6 @@
         showingAnswer = false;
         userAnswers = {};
 
-        // Save progress whenever we render a new question
         saveProgress();
 
         document.getElementById('currentQ').textContent = currentQuestion + 1;
@@ -790,12 +791,10 @@
 
         document.getElementById('content').innerHTML = html;
 
-        // Event listeners
         document.getElementById('showAnswerBtn').addEventListener('click', showAnswer);
         document.getElementById('nextBtn').addEventListener('click', nextQuestion);
         document.getElementById('prevBtn').addEventListener('click', prevQuestion);
 
-        // Setup drag and drop if needed
         if (q.questionType === 'drag-drop') {
             setupDragDrop();
         }
@@ -988,7 +987,6 @@
             currentQuestion++;
             renderQuestion();
         } else {
-            // Exam completed
             clearSavedProgress();
             alert(`Congratulations! You've completed all ${questions.length} questions!`);
             showWelcomeScreen();
@@ -1002,7 +1000,6 @@
         }
     }
 
-    // Setup click handlers for single choice
     document.addEventListener('click', (e) => {
         if (e.target.closest('.option') && !e.target.closest('.option').dataset.multiple) {
             const option = e.target.closest('.option');
@@ -1013,10 +1010,19 @@
         }
     });
 
-    // Restart button event listener
     document.getElementById('restartBtn').addEventListener('click', restartExam);
 
-    // Initialize
+    document.getElementById('fileSelector').addEventListener('change', (e) => {
+        const newFile = e.target.value;
+        if (confirm(`Switch to ${newFile}? Your current progress will be saved.`)) {
+            saveProgress();
+            loadQuestions(newFile);
+        } else {
+            e.target.value = currentFile;
+        }
+    });
+
+    document.getElementById('fileSelector').value = currentFile;
     loadQuestions();
 </script>
 </body>
