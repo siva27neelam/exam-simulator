@@ -1,0 +1,1365 @@
+[
+  {
+    "number": 401,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which term represents the ability to increase the computing capacity of a virtual machine by adding memory or CPUs?",
+    "options": [
+      {"label": "A", "text": "horizontal scaling"},
+      {"label": "B", "text": "agility"},
+      {"label": "C", "text": "elasticity"},
+      {"label": "D", "text": "vertical scaling"}
+    ],
+    "answer": "D",
+    "explanation": "Vertical scaling (scaling up) involves adding more resources like CPU or memory to an existing virtual machine."
+  },
+  {
+    "number": 402,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What enables a cloud service to adapt quickly to changing requirements?",
+    "options": [
+      {"label": "A", "text": "high availability"},
+      {"label": "B", "text": "agility"},
+      {"label": "C", "text": "manageability"},
+      {"label": "D", "text": "predictability"}
+    ],
+    "answer": "B",
+    "explanation": "Agility in cloud computing refers to the ability to rapidly develop, test, and deploy applications and adapt to changing business requirements quickly."
+  },
+  {
+    "number": 403,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What additional resource is required by an Azure virtual machine?",
+    "options": [
+      {"label": "A", "text": "Azure Firewall"},
+      {"label": "B", "text": "a virtual network"},
+      {"label": "C", "text": "a public IP address"},
+      {"label": "D", "text": "a service endpoint"}
+    ],
+    "answer": "B",
+    "explanation": "Every Azure virtual machine requires a virtual network."
+  },
+  {
+    "number": 404,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "How many copies of data are maintained by an Azure Storage account that uses locally-redundant storage (LRS)?",
+    "options": [
+      {"label": "A", "text": "3"},
+      {"label": "B", "text": "4"},
+      {"label": "C", "text": "6"},
+      {"label": "D", "text": "9"}
+    ],
+    "answer": "A",
+    "explanation": "Locally-redundant storage (LRS) maintains three copies of your data within a single datacenter."
+  },
+  {
+    "number": 405,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an Azure subscription and 100 Windows 10 devices. You need to ensure that only users whose devices have the latest security patches installed can access Azure AD-integrated applications. What should you implement?",
+    "options": [
+      {"label": "A", "text": "Azure Bastion"},
+      {"label": "B", "text": "a conditional access policy"},
+      {"label": "C", "text": "Azure Policy"},
+      {"label": "D", "text": "Azure Firewall"}
+    ],
+    "answer": "B",
+    "explanation": "Conditional access policies in Azure AD can enforce compliance requirements before granting access."
+  },
+  {
+    "number": 406,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have on-premises servers that run Windows Server. What should you implement to manage the servers by using the Azure portal?",
+    "options": [
+      {"label": "A", "text": "Azure Kubernetes Service (AKS)"},
+      {"label": "B", "text": "Azure Arc"},
+      {"label": "C", "text": "Docker"},
+      {"label": "D", "text": "role-based access control (RBAC)"}
+    ],
+    "answer": "B",
+    "explanation": "Azure Arc extends Azure management capabilities to on-premises environments."
+  },
+  {
+    "number": 407,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You plan to deploy a service to Azure virtual machines. You need to ensure that the service will be available if a datacenter fails. What should you use as part of the virtual machine deployment?",
+    "options": [
+      {"label": "A", "text": "availability sets"},
+      {"label": "B", "text": "proximity placement groups"},
+      {"label": "C", "text": "host groups"},
+      {"label": "D", "text": "availability zones"}
+    ],
+    "answer": "D",
+    "explanation": "Availability zones protect against datacenter-level failures."
+  },
+  {
+    "number": 408,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "At which OSI layer does ExpressRoute operate?",
+    "options": [
+      {"label": "A", "text": "Layer 5"},
+      {"label": "B", "text": "Layer 7"},
+      {"label": "C", "text": "Layer 3"},
+      {"label": "D", "text": "Layer 2"}
+    ],
+    "answer": "D",
+    "explanation": "Azure ExpressRoute operates at Layer 2 (Data Link Layer) of the OSI model."
+  },
+  {
+    "number": 409,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is a feature of an Azure virtual network?",
+    "options": [
+      {"label": "A", "text": "resource cost analysis"},
+      {"label": "B", "text": "packet inspection"},
+      {"label": "C", "text": "isolation and segmentation"},
+      {"label": "D", "text": "geo-redundancy"}
+    ],
+    "answer": "C",
+    "explanation": "Azure virtual networks provide isolation and segmentation capabilities."
+  },
+  {
+    "number": 410,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What provides a unified way to project and manage non-Azure resources in Azure Resource Manager (ARM)?",
+    "options": [
+      {"label": "A", "text": "Azure Arc"},
+      {"label": "B", "text": "Azure AD Connect"},
+      {"label": "C", "text": "Azure Migrate"},
+      {"label": "D", "text": "Azure Front Door"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Arc projects non-Azure resources into ARM for unified management."
+  },
+  {
+    "number": 411,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "In the software as a service (SaaS) cloud service, which responsibility is shared between Microsoft and the customer?",
+    "options": [
+      {"label": "A", "text": "identity and directory infrastructure management"},
+      {"label": "B", "text": "application management"},
+      {"label": "C", "text": "information and data management"},
+      {"label": "D", "text": "operating system updates"}
+    ],
+    "answer": "C",
+    "explanation": "In SaaS, information and data management is a shared responsibility."
+  },
+  {
+    "number": 412,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company has an Azure subscription and three business units. You need to ensure that the new resources are deployed by using a repeatable and reliable method. What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure Arc"},
+      {"label": "B", "text": "a resource group"},
+      {"label": "C", "text": "Azure Resource Manager (ARM) templates"},
+      {"label": "D", "text": "Azure Policy"}
+    ],
+    "answer": "C",
+    "explanation": "ARM templates provide infrastructure as code for consistent deployments."
+  },
+  {
+    "number": 413,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "You plan to reduce ongoing Azure expenditures. Which three factors affect the costs of a resource?",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {"label": "A", "text": "the Azure region"},
+      {"label": "B", "text": "the type of processed data"},
+      {"label": "C", "text": "the volume of inbound data"},
+      {"label": "D", "text": "the volume of outbound data"},
+      {"label": "E", "text": "the service tier"}
+    ],
+    "answer": ["B", "D", "E"],
+    "explanation": "Azure costs are affected by data type processed, outbound data volume, and service tier."
+  },
+  {
+    "number": 414,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which cloud computing benefit provides continuous user access to a cloud-based application with minimal downtime?",
+    "options": [
+      {"label": "A", "text": "high availability"},
+      {"label": "B", "text": "elasticity"},
+      {"label": "C", "text": "scalability"},
+      {"label": "D", "text": "agility"}
+    ],
+    "answer": "A",
+    "explanation": "High availability ensures applications remain accessible with minimal downtime."
+  },
+  {
+    "number": 415,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What should a desktop application use to interact with Azure and manage resources?",
+    "options": [
+      {"label": "A", "text": "Azure Resource Manager (ARM) templates"},
+      {"label": "B", "text": "APIs"},
+      {"label": "C", "text": "Azure Cloud Shell"},
+      {"label": "D", "text": "Azure Command-Line Interface (CLI)"}
+    ],
+    "answer": "B",
+    "explanation": "Desktop applications use Azure REST APIs to programmatically interact with Azure."
+  },
+  {
+    "number": 416,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which Azure service is an example of serverless computing?",
+    "options": [
+      {"label": "A", "text": "Azure dedicated hosts"},
+      {"label": "B", "text": "Azure Virtual Machines"},
+      {"label": "C", "text": "Azure Functions"},
+      {"label": "D", "text": "Azure storage account"}
+    ],
+    "answer": "C",
+    "explanation": "Azure Functions is a serverless compute service that runs event-triggered code without managing infrastructure."
+  },
+  {
+    "number": 417,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You need to migrate an on-premises server by using a lift-and-shift migration. To which type of cloud service should you migrate?",
+    "options": [
+      {"label": "A", "text": "infrastructure as a service (IaaS)"},
+      {"label": "B", "text": "software as a service (SaaS)"},
+      {"label": "C", "text": "platform as a service (PaaS)"}
+    ],
+    "answer": "A",
+    "explanation": "Lift-and-shift migrations are best suited for IaaS as it provides virtual machines that can host applications with minimal changes."
+  },
+  {
+    "number": 418,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "Which two features or services can be integrated with Azure Monitor? Each correct answer presents part of the solution.",
+    "note": "Each correct answer is worth one point.",
+    "options": [
+      {"label": "A", "text": "Application Insights"},
+      {"label": "B", "text": "Azure Advisor"},
+      {"label": "C", "text": "Azure status"},
+      {"label": "D", "text": "Azure Service Health"},
+      {"label": "E", "text": "Log Analytics"}
+    ],
+    "answer": ["A", "E"],
+    "explanation": "Application Insights and Log Analytics are both integrated features of Azure Monitor."
+  },
+  {
+    "number": 419,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have a set of Azure policies. You need to group related policies together. What should you use?",
+    "options": [
+      {"label": "A", "text": "exemptions"},
+      {"label": "B", "text": "metadata"},
+      {"label": "C", "text": "parameters"},
+      {"label": "D", "text": "initiatives"}
+    ],
+    "answer": "D",
+    "explanation": "Azure Policy initiatives allow you to group multiple related policy definitions together."
+  },
+  {
+    "number": 420,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What can you use to make recommendations that will reduce Azure costs?",
+    "options": [
+      {"label": "A", "text": "Azure Advisor"},
+      {"label": "B", "text": "Log Analytics"},
+      {"label": "C", "text": "Azure Service Health"},
+      {"label": "D", "text": "the Azure pricing calculator"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Advisor provides personalized recommendations including cost optimization."
+  },
+  {
+    "number": 421,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Microsoft 365 is an example of which cloud service model?",
+    "options": [
+      {"label": "A", "text": "infrastructure as a service (IaaS)"},
+      {"label": "B", "text": "platform as a service (PaaS)"},
+      {"label": "C", "text": "software as a service (SaaS)"}
+    ],
+    "answer": "C",
+    "explanation": "Microsoft 365 is a SaaS offering providing ready-to-use applications."
+  },
+  {
+    "number": 422,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is the function of a Site-to-Site VPN?",
+    "options": [
+      {"label": "A", "text": "provides a secure connection between a computer on a public network and the corporate network"},
+      {"label": "B", "text": "provides a connection from an on-premises VPN device to an Azure VPN gateway"},
+      {"label": "C", "text": "provides a dedicated private connection to Azure that does NOT travel over the internet"}
+    ],
+    "answer": "B",
+    "explanation": "A Site-to-Site VPN connects on-premises VPN devices to Azure VPN gateway."
+  },
+  {
+    "number": 423,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What should you use to track the costs of Azure resources?",
+    "options": [
+      {"label": "A", "text": "Tags"},
+      {"label": "B", "text": "usage and quotas"},
+      {"label": "C", "text": "Azure Quickstart templates"},
+      {"label": "D", "text": "budgets"}
+    ],
+    "answer": "D",
+    "explanation": "Azure budgets help track and manage costs of Azure resources."
+  },
+  {
+    "number": 424,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "You plan to collect and analyze event details for five Azure virtual machines. Which two tools should you use? Each correct answer presents part of the solution.",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {"label": "A", "text": "Azure Service Bus"},
+      {"label": "B", "text": "Azure Monitor"},
+      {"label": "C", "text": "Azure Service Health"},
+      {"label": "D", "text": "Log Analytics"},
+      {"label": "E", "text": "Azure Advisor"}
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Azure Monitor and Log Analytics work together to collect, analyze, and query event data from VMs."
+  },
+  {
+    "number": 425,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You need to compare a company's cloud usage to industry standard best practices. What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure Monitor"},
+      {"label": "B", "text": "Azure Advisor"},
+      {"label": "C", "text": "Application Insights in Azure Monitor"},
+      {"label": "D", "text": "Azure Service Health"}
+    ],
+    "answer": "B",
+    "explanation": "Azure Advisor provides best practice recommendations based on industry standards."
+  },
+  {
+    "number": 426,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company has an Azure subscription that contains several resources. You need to identify which department is responsible for the cost of each resource. What should you use?",
+    "options": [
+      {"label": "A", "text": "tags"},
+      {"label": "B", "text": "alerts"},
+      {"label": "C", "text": "budgets"}
+    ],
+    "answer": "A",
+    "explanation": "Tags can be used to organize resources and track costs by department or other categories."
+  },
+  {
+    "number": 427,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which service can replace a resource lock automatically if the lock is removed?",
+    "options": [
+      {"label": "A", "text": "Azure Blueprints"},
+      {"label": "B", "text": "Azure Information Protection (AIP)"},
+      {"label": "C", "text": "Azure Backup"},
+      {"label": "D", "text": "Azure Advisor"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Blueprints can automatically reapply resource locks if they are removed, ensuring governance policies remain enforced."
+  },
+  {
+    "number": 428,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is used to grant permission to Azure Virtual Desktop resources?",
+    "options": [
+      {"label": "A", "text": "role-based access control (RBAC) roles"},
+      {"label": "B", "text": "application security groups"},
+      {"label": "C", "text": "tags"},
+      {"label": "D", "text": "resource groups"}
+    ],
+    "answer": "A",
+    "explanation": "RBAC roles are used to grant permissions to Azure Virtual Desktop resources."
+  },
+  {
+    "number": 429,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an Azure subscription. You need to review your secure score. What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure Monitor"},
+      {"label": "B", "text": "Azure Advisor"},
+      {"label": "C", "text": "Help - support"},
+      {"label": "D", "text": "Microsoft Defender for Cloud"}
+    ],
+    "answer": "D",
+    "explanation": "Microsoft Defender for Cloud (formerly Azure Security Center) provides the secure score feature."
+  },
+  {
+    "number": 430,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is an example of vertical scaling in a cloud environment?",
+    "options": [
+      {"label": "A", "text": "additional CPU to an existing Azure virtual machine"},
+      {"label": "B", "text": "adding an additional Azure App Service instance automatically"},
+      {"label": "C", "text": "adding an additional Azure virtual machine"},
+      {"label": "D", "text": "adding an additional Azure Virtual Desktop session host"}
+    ],
+    "answer": "A",
+    "explanation": "Vertical scaling (scaling up) means adding more resources like CPU or memory to an existing instance."
+  },
+  {
+    "number": 431,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What enables a cloud service to adapt quickly to changing requirements?",
+    "options": [
+      {"label": "A", "text": "high availability"},
+      {"label": "B", "text": "agility"},
+      {"label": "C", "text": "manageability"},
+      {"label": "D", "text": "predictability"}
+    ],
+    "answer": "B",
+    "explanation": "Agility is the ability to rapidly deploy and configure cloud resources as requirements change."
+  },
+  {
+    "number": 432,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What additional resource is required by an Azure virtual machine?",
+    "options": [
+      {"label": "A", "text": "Azure Firewall"},
+      {"label": "B", "text": "a virtual network"},
+      {"label": "C", "text": "a public IP address"},
+      {"label": "D", "text": "a service endpoint"}
+    ],
+    "answer": "B",
+    "explanation": "A virtual network is required for every Azure virtual machine deployment."
+  },
+  {
+    "number": 433,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "How many copies of data are maintained by an Azure Storage account that uses locally-redundant storage (LRS)?",
+    "options": [
+      {"label": "A", "text": "3"},
+      {"label": "B", "text": "4"},
+      {"label": "C", "text": "6"},
+      {"label": "D", "text": "9"}
+    ],
+    "answer": "A",
+    "explanation": "LRS maintains three synchronous copies of data within a single datacenter."
+  },
+  {
+    "number": 434,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an Azure subscription. You plan to create a virtual machine. Where will the virtual machine be placed in Azure?",
+    "options": [
+      {"label": "A", "text": "In a storage account"},
+      {"label": "B", "text": "In a resource group"},
+      {"label": "C", "text": "In an administrative unit"},
+      {"label": "D", "text": "In an application group"}
+    ],
+    "answer": "B",
+    "explanation": "Virtual machines must be placed in a resource group, which is a logical container for Azure resources."
+  },
+  {
+    "number": 435,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "In the infrastructure as a service (IaaS) cloud service model, which two components are the responsibility of the cloud service provider? Each correct answer presents a complete solution.",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {"label": "A", "text": "the configuration and maintenance of storage"},
+      {"label": "B", "text": "the installation and configuration of the operating system"},
+      {"label": "C", "text": "maintaining the hardware"},
+      {"label": "D", "text": "the network configuration"},
+      {"label": "E", "text": "physical security of the datacenter infrastructure"}
+    ],
+    "answer": ["C", "E"],
+    "explanation": "In IaaS, the cloud provider is responsible for maintaining hardware and physical datacenter security."
+  },
+  {
+    "number": 436,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have a web app that runs in Azure. You need to identify the amount of time it takes for web pages to load in a user's browser. What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure Monitor alerts"},
+      {"label": "B", "text": "Application Insights in Azure Monitor"},
+      {"label": "C", "text": "Azure Network Watcher"},
+      {"label": "D", "text": "Log Analytics"}
+    ],
+    "answer": "B",
+    "explanation": "Application Insights provides browser page load time metrics and end-user experience monitoring."
+  },
+  {
+    "number": 437,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "Which two features of services can be integrated with Azure Monitor? Each correct answer presents part of the solution.",
+    "note": "Each correct answer is worth one point.",
+    "options": [
+      {"label": "A", "text": "Azure Service Health"},
+      {"label": "B", "text": "Azure Advisor"},
+      {"label": "C", "text": "Azure status"},
+      {"label": "D", "text": "Application Insights"},
+      {"label": "E", "text": "Log Analytics"}
+    ],
+    "answer": ["D", "E"],
+    "explanation": "Application Insights and Log Analytics are core components integrated with Azure Monitor."
+  },
+  {
+    "number": 438,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You need to start Azure Cloud Shell. What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure PowerShell"},
+      {"label": "B", "text": "an Azure Resource Manager (ARM) template"},
+      {"label": "C", "text": "the Azure portal"},
+      {"label": "D", "text": "Azure Command-Line Interface (CLI)"}
+    ],
+    "answer": "C",
+    "explanation": "Azure Cloud Shell is accessed through the Azure portal via a web browser."
+  },
+  {
+    "number": 439,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an Azure subscription. You need to use Azure Cloud Shell to run a deployment script. What should you use to access Cloud Shell?",
+    "options": [
+      {"label": "A", "text": "Azure Resource Manager (ARM)"},
+      {"label": "B", "text": "Microsoft Visual Studio"},
+      {"label": "C", "text": "a Windows command prompt"},
+      {"label": "D", "text": "a web browser"}
+    ],
+    "answer": "D",
+    "explanation": "Azure Cloud Shell is a browser-based shell accessible through any web browser."
+  },
+  {
+    "number": 440,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What provides a unified way to project and manage non-Azure resources in Azure Resource Manager (ARM)?",
+    "options": [
+      {"label": "A", "text": "Azure Arc"},
+      {"label": "B", "text": "Azure AD Connect"},
+      {"label": "C", "text": "Azure Migrate"},
+      {"label": "D", "text": "Azure Front Door"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Arc extends Azure management to on-premises and multi-cloud resources."
+  },
+  {
+    "number": 441,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "In the software as a service (SaaS) cloud service, which responsibility is shared between Microsoft and the customer?",
+    "options": [
+      {"label": "A", "text": "identity and directory infrastructure management"},
+      {"label": "B", "text": "application management"},
+      {"label": "C", "text": "information and data management"},
+      {"label": "D", "text": "operating system updates"}
+    ],
+    "answer": "C",
+    "explanation": "In SaaS, information and data management is shared - Microsoft provides the platform, customers manage their data."
+  },
+  {
+    "number": 442,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company has an Azure subscription and three business units. You need to ensure that the new resources are deployed by using a repeatable and reliable method that applies the same configurations to each resource. What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure Arc"},
+      {"label": "B", "text": "a resource group"},
+      {"label": "C", "text": "Azure Resource Manager (ARM) templates"},
+      {"label": "D", "text": "Azure Policy"}
+    ],
+    "answer": "C",
+    "explanation": "ARM templates enable infrastructure as code for consistent, repeatable deployments."
+  },
+  {
+    "number": 443,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which cloud computing benefit provides continuous user access to a cloud-based application with minimal downtime?",
+    "options": [
+      {"label": "A", "text": "high availability"},
+      {"label": "B", "text": "elasticity"},
+      {"label": "C", "text": "scalability"},
+      {"label": "D", "text": "agility"}
+    ],
+    "answer": "A",
+    "explanation": "High availability ensures minimal downtime through redundancy and failover."
+  },
+  {
+    "number": 444,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What should a desktop application use to interact with Azure and manage resources?",
+    "options": [
+      {"label": "A", "text": "Azure Resource Manager (ARM) templates"},
+      {"label": "B", "text": "APIs"},
+      {"label": "C", "text": "Azure Cloud Shell"},
+      {"label": "D", "text": "Azure Command-Line Interface (CLI)"}
+    ],
+    "answer": "B",
+    "explanation": "Desktop applications use Azure REST APIs for programmatic interaction with Azure services."
+  },
+  {
+    "number": 445,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which Azure service is an example of serverless computing?",
+    "options": [
+      {"label": "A", "text": "Azure dedicated hosts"},
+      {"label": "B", "text": "Azure Virtual Machines"},
+      {"label": "C", "text": "Azure Functions"},
+      {"label": "D", "text": "Azure storage account"}
+    ],
+    "answer": "C",
+    "explanation": "Azure Functions provides serverless, event-driven compute without infrastructure management."
+  },
+  {
+    "number": 446,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You need to migrate an on-premises server by using a lift-and-shift migration. To which type of cloud service should you migrate?",
+    "options": [
+      {"label": "A", "text": "infrastructure as a service (IaaS)"},
+      {"label": "B", "text": "software as a service (SaaS)"},
+      {"label": "C", "text": "platform as a service (PaaS)"}
+    ],
+    "answer": "A",
+    "explanation": "Lift-and-shift migrations move existing applications to IaaS VMs with minimal changes."
+  },
+  {
+    "number": 447,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "Which two features or services can be integrated with Azure Monitor? Each correct answer presents part of the solution.",
+    "note": "Each correct answer is worth one point.",
+    "options": [
+      {"label": "A", "text": "Application Insights"},
+      {"label": "B", "text": "Azure Advisor"},
+      {"label": "C", "text": "Azure status"},
+      {"label": "D", "text": "Azure Service Health"},
+      {"label": "E", "text": "Log Analytics"}
+    ],
+    "answer": ["A", "E"],
+    "explanation": "Application Insights and Log Analytics are integrated monitoring components of Azure Monitor."
+  },
+  {
+    "number": 448,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have a set of Azure policies. You need to group related policies together. What should you use?",
+    "options": [
+      {"label": "A", "text": "exemptions"},
+      {"label": "B", "text": "metadata"},
+      {"label": "C", "text": "parameters"},
+      {"label": "D", "text": "initiatives"}
+    ],
+    "answer": "D",
+    "explanation": "Policy initiatives group related policies for simplified assignment and management."
+  },
+  {
+    "number": 449,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What can you use to make recommendations that will reduce Azure costs?",
+    "options": [
+      {"label": "A", "text": "Azure Advisor"},
+      {"label": "B", "text": "Log Analytics"},
+      {"label": "C", "text": "Azure Service Health"},
+      {"label": "D", "text": "the Azure pricing calculator"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Advisor analyzes configurations and usage to provide cost optimization recommendations."
+  },
+  {
+    "number": 450,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Microsoft 365 is an example of which cloud service model?",
+    "options": [
+      {"label": "A", "text": "infrastructure as a service (IaaS)"},
+      {"label": "B", "text": "platform as a service (PaaS)"},
+      {"label": "C", "text": "software as a service (SaaS)"}
+    ],
+    "answer": "C",
+    "explanation": "Microsoft 365 provides complete software applications delivered as a service."
+  },
+  {
+    "number": 451,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is the function of a Site-to-Site VPN?",
+    "options": [
+      {"label": "A", "text": "provides a secure connection between a computer on a public network and the corporate network"},
+      {"label": "B", "text": "provides a connection from an on-premises VPN device to an Azure VPN gateway"},
+      {"label": "C", "text": "provides a dedicated private connection to Azure that does NOT travel over the internet"}
+    ],
+    "answer": "B",
+    "explanation": "Site-to-Site VPN creates an encrypted tunnel from on-premises VPN devices to Azure VPN Gateway."
+  },
+  {
+    "number": 452,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What should you use to track the costs of Azure resources?",
+    "options": [
+      {"label": "A", "text": "Tags"},
+      {"label": "B", "text": "usage and quotas"},
+      {"label": "C", "text": "Azure Quickstart templates"},
+      {"label": "D", "text": "budgets"}
+    ],
+    "answer": "D",
+    "explanation": "Azure budgets help track and manage costs with alerts when spending thresholds are reached."
+  },
+  {
+    "number": 453,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "You plan to collect and analyze event details for five Azure virtual machines. You need to run queries to compare the event details collected from all the virtual machines. Which two tools should you use?",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {"label": "A", "text": "Azure Service Bus"},
+      {"label": "B", "text": "Azure Monitor"},
+      {"label": "C", "text": "Azure Service Health"},
+      {"label": "D", "text": "Log Analytics"},
+      {"label": "E", "text": "Azure Advisor"}
+    ],
+    "answer": ["B", "D"],
+    "explanation": "Azure Monitor collects the data and Log Analytics provides the query interface to analyze events across VMs."
+  },
+  {
+    "number": 454,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You need to compare a company's cloud usage to industry standard best practices. What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure Monitor"},
+      {"label": "B", "text": "Azure Advisor"},
+      {"label": "C", "text": "Application Insights in Azure Monitor"},
+      {"label": "D", "text": "Azure Service Health"}
+    ],
+    "answer": "B",
+    "explanation": "Azure Advisor compares your configuration against best practices and provides recommendations."
+  },
+  {
+    "number": 455,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company has an Azure subscription that contains several resources. You need to identify which department is responsible for the cost of each resource. What should you use?",
+    "options": [
+      {"label": "A", "text": "tags"},
+      {"label": "B", "text": "alerts"},
+      {"label": "C", "text": "budgets"}
+    ],
+    "answer": "A",
+    "explanation": "Tags allow you to categorize resources by department for cost tracking and reporting."
+  },
+  {
+    "number": 456,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which service can replace a resource lock automatically if the lock is removed?",
+    "options": [
+      {"label": "A", "text": "Azure Blueprints"},
+      {"label": "B", "text": "Azure Information Protection (AIP)"},
+      {"label": "C", "text": "Azure Backup"},
+      {"label": "D", "text": "Azure Advisor"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Blueprints can enforce and automatically reapply resource locks as part of governance."
+  },
+  {
+    "number": 457,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is used to grant permission to Azure Virtual Desktop resources?",
+    "options": [
+      {"label": "A", "text": "role-based access control (RBAC) roles"},
+      {"label": "B", "text": "application security groups"},
+      {"label": "C", "text": "tags"},
+      {"label": "D", "text": "resource groups"}
+    ],
+    "answer": "A",
+    "explanation": "RBAC roles control access and permissions to Azure Virtual Desktop resources."
+  },
+  {
+    "number": 458,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an Azure subscription. You need to review your secure score. What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure Monitor"},
+      {"label": "B", "text": "Azure Advisor"},
+      {"label": "C", "text": "Help - support"},
+      {"label": "D", "text": "Microsoft Defender for Cloud"}
+    ],
+    "answer": "D",
+    "explanation": "Microsoft Defender for Cloud provides the secure score feature to assess security posture."
+  },
+  {
+    "number": 459,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is an example of vertical scaling in a cloud environment?",
+    "options": [
+      {"label": "A", "text": "adding additional CPU to an existing Azure virtual machine"},
+      {"label": "B", "text": "adding an additional Azure App Service instance automatically"},
+      {"label": "C", "text": "adding an additional Azure virtual machine"},
+      {"label": "D", "text": "adding an additional Azure Virtual Desktop session host"}
+    ],
+    "answer": "A",
+    "explanation": "Vertical scaling (scaling up) adds more power to existing resources, like adding CPU or RAM."
+  },
+  {
+    "number": 460,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What enables a cloud service to adapt quickly to changing requirements?",
+    "options": [
+      {"label": "A", "text": "high availability"},
+      {"label": "B", "text": "agility"},
+      {"label": "C", "text": "manageability"},
+      {"label": "D", "text": "predictability"}
+    ],
+    "answer": "B",
+    "explanation": "Agility enables rapid resource deployment and configuration changes to meet evolving needs."
+  },
+  {
+    "number": 461,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which service provides network traffic filtering across multiple Azure subscriptions and virtual networks?",
+    "options": [
+      {"label": "A", "text": "Azure Firewall"},
+      {"label": "B", "text": "an application security group"},
+      {"label": "C", "text": "Azure DDoS protection"},
+      {"label": "D", "text": "a network security group (NSG)"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Firewall can protect resources across multiple subscriptions and virtual networks from a centralized location."
+  },
+  {
+    "number": 462,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company is planning on deploying a stateless based application based on microservices using the Azure Service Fabric service. Which of the following should you consider?",
+    "note": "Choose two",
+    "options": [
+      {"label": "A", "text": "The network connectivity"},
+      {"label": "B", "text": "The number of node types in the cluster"},
+      {"label": "C", "text": "The properties for each node type"},
+      {"label": "D", "text": "The service tier"}
+    ],
+    "answer": ["B", "C"],
+    "explanation": "For Azure Service Fabric infrastructure design, you need to consider the number of node types and their properties."
+  },
+  {
+    "number": 463,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What should you use to evaluate whether your company's Azure environment meets regulatory requirements?",
+    "options": [
+      {"label": "A", "text": "Microsoft Defender for Cloud"},
+      {"label": "B", "text": "Azure Advisor"},
+      {"label": "C", "text": "Azure Service Health"},
+      {"label": "D", "text": "Azure Knowledge Center"}
+    ],
+    "answer": "A",
+    "explanation": "Microsoft Defender for Cloud includes a regulatory compliance dashboard to assess compliance posture."
+  },
+  {
+    "number": 464,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an Azure virtual machine named VM1. You plan to encrypt VM1 by using Azure Disk Encryption. Which Azure resource must you create first?",
+    "options": [
+      {"label": "A", "text": "An Azure Storage account"},
+      {"label": "B", "text": "An Azure Information Protection policy"},
+      {"label": "C", "text": "An Encryption Key"},
+      {"label": "D", "text": "An Azure Key Vault"}
+    ],
+    "answer": "D",
+    "explanation": "Azure Disk Encryption requires an Azure Key Vault to store encryption keys."
+  },
+  {
+    "number": 465,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What can you use to identify underutilized or unused Azure virtual machines?",
+    "options": [
+      {"label": "A", "text": "Azure Advisor"},
+      {"label": "B", "text": "Azure Cost Management + Billing"},
+      {"label": "C", "text": "Azure reservations"},
+      {"label": "D", "text": "Azure Policy"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Advisor provides recommendations for underutilized resources to optimize costs."
+  },
+  {
+    "number": 466,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have a set of Azure policies. You need to group related policies together. What should you use?",
+    "options": [
+      {"label": "A", "text": "exemptions"},
+      {"label": "B", "text": "metadata"},
+      {"label": "C", "text": "parameters"},
+      {"label": "D", "text": "initiatives"}
+    ],
+    "answer": "D",
+    "explanation": "Initiatives are collections of policy definitions grouped together."
+  },
+  {
+    "number": 467,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What can you use to make recommendations that will reduce Azure costs?",
+    "options": [
+      {"label": "A", "text": "Azure Advisor"},
+      {"label": "B", "text": "Log Analytics"},
+      {"label": "C", "text": "Azure Service Health"},
+      {"label": "D", "text": "the Azure pricing calculator"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Advisor provides cost optimization recommendations based on usage patterns."
+  },
+  {
+    "number": 468,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Microsoft 365 is an example of which cloud service model?",
+    "options": [
+      {"label": "A", "text": "infrastructure as a service (IaaS)"},
+      {"label": "B", "text": "platform as a service (PaaS)"},
+      {"label": "C", "text": "software as a service (SaaS)"}
+    ],
+    "answer": "C",
+    "explanation": "Microsoft 365 is a complete software solution delivered as a service."
+  },
+  {
+    "number": 469,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is the function of a Site-to-Site VPN?",
+    "options": [
+      {"label": "A", "text": "provides a secure connection between a computer on a public network and the corporate network"},
+      {"label": "B", "text": "provides a connection from an on-premises VPN device to an Azure VPN gateway"},
+      {"label": "C", "text": "provides a dedicated private connection to Azure that does NOT travel over the internet"}
+    ],
+    "answer": "B",
+    "explanation": "Site-to-Site VPN connects entire on-premises networks to Azure through VPN devices."
+  },
+  {
+    "number": 470,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You plan to provision Infrastructure as a Service (IaaS) resources in Azure. Which resource is an example of IaaS?",
+    "options": [
+      {"label": "A", "text": "an Azure web app"},
+      {"label": "B", "text": "an Azure virtual machine"},
+      {"label": "C", "text": "an Azure logic app"},
+      {"label": "D", "text": "an Azure SQL database"}
+    ],
+    "answer": "B",
+    "explanation": "Azure virtual machines are IaaS resources where you manage the OS and applications."
+  },
+  {
+    "number": 471,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which service provides serverless computing in Azure?",
+    "options": [
+      {"label": "A", "text": "Azure Virtual Machines"},
+      {"label": "B", "text": "Azure Container instances"},
+      {"label": "C", "text": "Azure Functions"},
+      {"label": "D", "text": "Azure storage account"}
+    ],
+    "answer": "C",
+    "explanation": "Azure Functions provides serverless compute for event-driven code execution."
+  },
+  {
+    "number": 472,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Who can use the Azure Total Cost of Ownership (TCO) calculator?",
+    "options": [
+      {"label": "A", "text": "owners for an Azure subscription only"},
+      {"label": "B", "text": "all users who have an account in Azure Active Directory (Azure AD) that is linked to an Azure subscription only"},
+      {"label": "C", "text": "anyone"},
+      {"label": "D", "text": "billing readers for an Azure subscription only"}
+    ],
+    "answer": "C",
+    "explanation": "The Azure TCO calculator is publicly available and can be used by anyone without an Azure subscription."
+  },
+  {
+    "number": 473,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an accounting application named App1 that uses a legacy database. You plan to move App1 to the cloud. Which service model should you use?",
+    "options": [
+      {"label": "A", "text": "software as a service (SaaS)"},
+      {"label": "B", "text": "infrastructure as a service (IaaS)"},
+      {"label": "C", "text": "platform as a service (PaaS)"}
+    ],
+    "answer": "B",
+    "explanation": "Legacy applications with specific database requirements are best suited for IaaS where you have full control over the environment."
+  },
+  {
+    "number": 474,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is the longest term you can purchase for Azure Reserved VM Instances?",
+    "options": [
+      {"label": "A", "text": "three years"},
+      {"label": "B", "text": "four years"},
+      {"label": "C", "text": "one year"},
+      {"label": "D", "text": "five years"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Reserved VM Instances can be purchased for one-year or three-year terms."
+  },
+  {
+    "number": 475,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "You need to manage containers. Which two services can you use?",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {"label": "A", "text": "Azure Virtual Desktop"},
+      {"label": "B", "text": "Azure virtual machines"},
+      {"label": "C", "text": "Azure Functions"},
+      {"label": "D", "text": "Azure Kubernetes Service (AKS)"},
+      {"label": "E", "text": "Azure Container Instances"}
+    ],
+    "answer": ["D", "E"],
+    "explanation": "Azure Kubernetes Service (AKS) and Azure Container Instances are both container management services."
+  },
+  {
+    "number": 476,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have an Azure environment that contains 10 virtual networks and 100 virtual machines. You need to limit the inbound traffic to all the Azure virtual networks. What should you create?",
+    "options": [
+      {"label": "A", "text": "one Azure firewall"},
+      {"label": "B", "text": "10 Azure ExpressRoute circuits"},
+      {"label": "C", "text": "10 virtual network gateways"},
+      {"label": "D", "text": "one application security group (ASG)"}
+    ],
+    "answer": "A",
+    "explanation": "A single Azure Firewall can protect multiple virtual networks centrally."
+  },
+  {
+    "number": 477,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "How should you calculate the composite SLA for an application that uses Azure services?",
+    "options": [
+      {"label": "A", "text": "Max(0.999, 0.9999) = 0.9999 = 99.99%"},
+      {"label": "B", "text": "0.999 / 0.9999 = 4.9991 = 99.91%"},
+      {"label": "C", "text": "0.999 * 0.9999 = 0.9989001 = 99.89001%"},
+      {"label": "D", "text": "Min(0.999, 0.9999) = 0.999 = 99.9%"}
+    ],
+    "answer": "C",
+    "explanation": "Composite SLA is calculated by multiplying the SLAs of all dependent services."
+  },
+  {
+    "number": 478,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which Service Level Agreement (SLA) is provided for Azure services in public preview?",
+    "options": [
+      {"label": "A", "text": "Each service defines its own SLA."},
+      {"label": "B", "text": "The SLA will be 99%."},
+      {"label": "C", "text": "The SLA will be 1% less than the general availability (GA) SLA."},
+      {"label": "D", "text": "The SLA will be 99.95%."}
+    ],
+    "answer": "A",
+    "explanation": "Preview services typically have no SLA or each service defines its own terms, but they're generally excluded from standard SLAs."
+  },
+  {
+    "number": 479,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What does a customer provide in a software as a service (SaaS) model?",
+    "options": [
+      {"label": "A", "text": "application software"},
+      {"label": "B", "text": "compute resources"},
+      {"label": "C", "text": "application data"},
+      {"label": "D", "text": "data storage"}
+    ],
+    "answer": "C",
+    "explanation": "In SaaS, customers provide their application data while the provider manages everything else."
+  },
+  {
+    "number": 480,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You have 50 virtual machines hosted on-premises and 50 virtual machines hosted in Azure. The on-premises virtual machines and the Azure virtual machines connect to each other. Which type of cloud model is this?",
+    "options": [
+      {"label": "A", "text": "hybrid"},
+      {"label": "B", "text": "public"},
+      {"label": "C", "text": "private"}
+    ],
+    "answer": "A",
+    "explanation": "A hybrid cloud combines on-premises infrastructure with public cloud resources."
+  },
+  {
+    "number": 481,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines remain available if a single data center fails. What are two possible solutions?",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {"label": "A", "text": "Deploy the virtual machines to a scale set."},
+      {"label": "B", "text": "Deploy the virtual machines to two or more resource groups."},
+      {"label": "C", "text": "Deploy the virtual machines to two or more availability zones."},
+      {"label": "D", "text": "Deploy the virtual machines to two or more regions."}
+    ],
+    "answer": ["C", "D"],
+    "explanation": "Availability zones and multiple regions both protect against datacenter failures."
+  },
+  {
+    "number": 482,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You need to collect and automatically analyze security events from Azure Active Directory (Azure AD). What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure Sentinel"},
+      {"label": "B", "text": "Azure Key Vault"},
+      {"label": "C", "text": "Azure Synapse Analytics"},
+      {"label": "D", "text": "Azure AD Connect"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Sentinel is a SIEM solution that can collect and analyze security events from Azure AD."
+  },
+  {
+    "number": 483,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is the most severe failure from which an Azure Availability Zone can be used to protect access to Azure services?",
+    "options": [
+      {"label": "A", "text": "an Azure region failure"},
+      {"label": "B", "text": "an Azure data center failure"},
+      {"label": "C", "text": "a physical server failure"},
+      {"label": "D", "text": "a storage failure"}
+    ],
+    "answer": "B",
+    "explanation": "Availability zones protect against datacenter-level failures within a region."
+  },
+  {
+    "number": 484,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You need to purchase a third-party virtual security appliance that you will deploy to an Azure subscription. What should you use?",
+    "options": [
+      {"label": "A", "text": "Azure Marketplace"},
+      {"label": "B", "text": "Azure Security Center"},
+      {"label": "C", "text": "Microsoft Store"},
+      {"label": "D", "text": "Azure subscriptions"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Marketplace provides third-party solutions including virtual security appliances."
+  },
+  {
+    "number": 485,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "What are two benefits of cloud computing? Each correct answer presents a complete solution.",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {"label": "A", "text": "enables the rapid provisioning of resources"},
+      {"label": "B", "text": "has increased administrative complexity"},
+      {"label": "C", "text": "has the same configuration options as on-premises"},
+      {"label": "D", "text": "shifts capital expenditures (CAPEX) to operating expenditures (OPEX)"}
+    ],
+    "answer": ["A", "D"],
+    "explanation": "Cloud computing enables rapid provisioning and shifts from CapEx to OpEx spending models."
+  },
+  {
+    "number": 486,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which cloud computing model includes on-premises and cloud-based resources?",
+    "options": [
+      {"label": "A", "text": "private"},
+      {"label": "B", "text": "public"},
+      {"label": "C", "text": "hybrid"}
+    ],
+    "answer": "C",
+    "explanation": "Hybrid cloud combines on-premises infrastructure with public cloud services."
+  },
+  {
+    "number": 487,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Where does Azure Monitor store performance data?",
+    "options": [
+      {"label": "A", "text": "a Log Analytics workspace"},
+      {"label": "B", "text": "an Azure Storage account"},
+      {"label": "C", "text": "Azure Event Hubs"},
+      {"label": "D", "text": "an event subscription"}
+    ],
+    "answer": "A",
+    "explanation": "Azure Monitor stores performance data in Log Analytics workspaces for querying and analysis."
+  },
+  {
+    "number": 488,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What should you use to prevent traffic from an Azure virtual network from being routed to an Azure Storage account via the internet?",
+    "options": [
+      {"label": "A", "text": "a public endpoint"},
+      {"label": "B", "text": "Azure VPN Gateway"},
+      {"label": "C", "text": "a service endpoint"},
+      {"label": "D", "text": "a network security group (NSG)"}
+    ],
+    "answer": "C",
+    "explanation": "Service endpoints enable private connectivity from virtual networks to Azure services without internet routing."
+  },
+  {
+    "number": 489,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which statement accurately describes the Modern Lifecycle Policy for Azure services?",
+    "options": [
+      {"label": "A", "text": "Microsoft provides mainstream support for a service for five years."},
+      {"label": "B", "text": "Microsoft provides a minimum of 12 months notice before ending support for a service."},
+      {"label": "C", "text": "After a service is made generally available, Microsoft provides support for the service for a minimum of four years."},
+      {"label": "D", "text": "When a service is retired, you can purchase extended support for the service for up to five years."}
+    ],
+    "answer": "B",
+    "explanation": "The Modern Lifecycle Policy requires Microsoft to give at least 12 months' notice before ending support."
+  },
+  {
+    "number": 490,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Which term represents the ability to increase the computing capacity of a virtual machine by adding memory or CPUs?",
+    "options": [
+      {"label": "A", "text": "horizontal scaling"},
+      {"label": "B", "text": "agility"},
+      {"label": "C", "text": "elasticity"},
+      {"label": "D", "text": "vertical scaling"}
+    ],
+    "answer": "D",
+    "explanation": "Vertical scaling means increasing the power of existing resources by adding CPU, memory, or other capabilities."
+  },
+  {
+    "number": 491,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "To which cloud models can you deploy physical servers?",
+    "options": [
+      {"label": "A", "text": "private cloud and hybrid cloud only"},
+      {"label": "B", "text": "private cloud only"},
+      {"label": "C", "text": "private cloud, hybrid cloud and public cloud"},
+      {"label": "D", "text": "hybrid cloud only"}
+    ],
+    "answer": "A",
+    "explanation": "Physical servers can be deployed in private cloud (on-premises) and hybrid cloud (combination of on-premises and cloud)."
+  },
+  {
+    "number": 492,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "In which type of cloud model are all the hardware resources owned by a third-party and shared between multiple tenants?",
+    "options": [
+      {"label": "A", "text": "private"},
+      {"label": "B", "text": "hybrid"},
+      {"label": "C", "text": "public"}
+    ],
+    "answer": "C",
+    "explanation": "In public cloud, the provider owns the hardware and shares it among multiple customers (multi-tenancy)."
+  },
+  {
+    "number": 493,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What can you use to automatically send an alert if an administrator stops an Azure virtual machine?",
+    "options": [
+      {"label": "A", "text": "Azure Advisor"},
+      {"label": "B", "text": "Azure Service Health"},
+      {"label": "C", "text": "Azure Monitor"},
+      {"label": "D", "text": "Azure Network Watcher"}
+    ],
+    "answer": "C",
+    "explanation": "Azure Monitor can create alerts based on activity logs, including VM stop operations."
+  },
+  {
+    "number": 494,
+    "questionType": "multiple-choice",
+    "type": "Multiple Choice",
+    "text": "You have an Azure environment. You need to create a new Azure virtual machine from a tablet that runs the Android operating system. What are three possible solutions?",
+    "note": "Each correct selection is worth one point.",
+    "options": [
+      {"label": "A", "text": "Use Bash in Azure Cloud Shell."},
+      {"label": "B", "text": "Use PowerShell in Azure Cloud Shell."},
+      {"label": "C", "text": "Use the PowerApps portal."},
+      {"label": "D", "text": "Use the Security & Compliance admin center."},
+      {"label": "E", "text": "Use the Azure portal."}
+    ],
+    "answer": ["A", "B", "E"],
+    "explanation": "Android tablets can access Azure portal via browser and use both Bash and PowerShell in Cloud Shell."
+  },
+  {
+    "number": 495,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails. Solution: You deploy the virtual machines to a scale set. Does this meet the goal?",
+    "options": [
+      {"label": "A", "text": "Yes"},
+      {"label": "B", "text": "No"}
+    ],
+    "answer": "B",
+    "explanation": "A scale set alone doesn't guarantee datacenter failure protection. You need availability zones or regions."
+  },
+  {
+    "number": 496,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company is planning a deployment using Azure Database for PostgreSQL. You need to select the appropriate deployment and pricing tier. What should you select?",
+    "options": [
+      {"label": "A", "text": "Azure Database for PostgreSQL Single Server Memory Optimized tier"},
+      {"label": "B", "text": "Azure Database for PostgreSQL Hyperscale (Citus)"},
+      {"label": "C", "text": "Azure Database for PostgreSQL Single Server General Purpose tier"},
+      {"label": "D", "text": "Azure Database for PostgreSQL Single Server Basic tier"}
+    ],
+    "answer": "C",
+    "explanation": "General Purpose tier supports up to 10 TB storage, Azure Premium Storage, and point-in-time restore up to 35 days while minimizing costs compared to Memory Optimized."
+  },
+  {
+    "number": 497,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "Your company uses management groups to manage resources in your Azure tenant more efficiently. User1 should be able to assign access and assign policies to management groups. You need to determine to which role-based access control (RBAC) role User1 should be added. What should you recommend?",
+    "options": [
+      {"label": "A", "text": "Owner"},
+      {"label": "B", "text": "User Access Administrator"},
+      {"label": "C", "text": "Management Group Contributor"},
+      {"label": "D", "text": "Contributor"}
+    ],
+    "answer": "B",
+    "explanation": "User Access Administrator role allows managing access (role assignments) and policies on management groups following the principle of least privilege."
+  }
+]

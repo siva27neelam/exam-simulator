@@ -1,0 +1,562 @@
+[
+  {
+    "number": 1,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A logistics company wants to use a generative AI (gen AI) agent to automatically check real-time inventory levels across its warehouses and adjust delivery schedules. The gen AI agent needs access to internal inventory data. They want the most cost-effective solution. What should the organization do?",
+    "options": [
+      {"label": "A", "text": "Build a custom API instead of using the gen AI agent."},
+      {"label": "B", "text": "Use pre-built gen AI chatbots for inventory questions."},
+      {"label": "C", "text": "Use Vertex AI Studio to fine-tune a model with sample inventory data."},
+      {"label": "D", "text": "Use Google Cloud databases and Vertex AI for the agent to get live data."}
+    ],
+    "answer": "D",
+    "explanation": "To achieve real-time inventory checks and adjust delivery schedules, the generative AI agent needs live access to the company's internal inventory data. Google Cloud databases provide the structured storage for this data, and Vertex AI offers the platform to build, deploy, and manage the AI agent, including connecting it to these live data sources."
+  },
+  {
+    "number": 2,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A pharmaceutical company's research and development department spends significant time manually reviewing new scientific papers to identify potential drug targets. They need a solution that can answer questions about these documents and provide summarized insights to researchers without requiring extensive coding expertise. What should the organization do?",
+    "options": [
+      {"label": "A", "text": "Use Gemini for Google Workspace to facilitate collaborative document review."},
+      {"label": "B", "text": "Use Vertex AI Search to index the papers and enable keyword-based searches."},
+      {"label": "C", "text": "Use Vertex AI AutoML to train a model that classifies papers into predefined research areas."},
+      {"label": "D", "text": "Use Vertex AI Agent Builder to create a custom AI agent."}
+    ],
+    "answer": "D",
+    "explanation": "Vertex AI Agent Builder is designed precisely for creating custom AI agents, often with low-code or no-code capabilities, that can interact with and process large volumes of information like scientific papers. It can answer questions about documents and provide summarized insights without requiring extensive coding expertise."
+  },
+  {
+    "number": 3,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "The office of the CISO wants to use generative AI (gen AI) to help automate tasks like summarizing case information, researching threats, and taking actions like creating detection rules. What agent should they use?",
+    "options": [
+      {"label": "A", "text": "Security agent"},
+      {"label": "B", "text": "Data agent"},
+      {"label": "C", "text": "Code agent"},
+      {"label": "D", "text": "Customer service agent"}
+    ],
+    "answer": "A",
+    "explanation": "Given the tasks involve researching threats and creating detection rules, the most appropriate and specialized agent would be a Security agent. This type of agent would be pre-configured or easily adaptable to understand security-specific contexts, data, and actions within a CISO's domain."
+  },
+  {
+    "number": 4,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A development team is configuring a generative AI model for a customer-facing application and wants to ensure the generated content is appropriate and harmless. What is the primary function of the safety settings parameter in a generative AI model?",
+    "options": [
+      {"label": "A", "text": "To limit the maximum text length that the model generates by ensuring concise responses."},
+      {"label": "B", "text": "To determine the number of tokens the model can process at once by influencing the complexity and length of inputs and outputs."},
+      {"label": "C", "text": "To filter out potentially harmful or inappropriate content from the model's output based on the desired level of filtering."},
+      {"label": "D", "text": "To control the creativity and randomness of the model's output by adjusting the diversity of word choices."}
+    ],
+    "answer": "C",
+    "explanation": "Safety settings in generative AI models are specifically designed to prevent the generation of content that could be harmful, offensive, or inappropriate. This includes filtering for categories like hate speech, sexually explicit content, self-harm, and violence, based on predefined thresholds."
+  },
+  {
+    "number": 5,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is a characteristic of Google Cloud as a generative AI company?",
+    "options": [
+      {"label": "A", "text": "Google Cloud provides fully autonomous AI agents that require zero configuration or management overhead."},
+      {"label": "B", "text": "Google Cloud has an AI-first focus that enables innovation, with continuous updates and broad integration across its platform."},
+      {"label": "C", "text": "Google Cloud ensures that all generative AI models and data are completely secured and isolated from external networks."},
+      {"label": "D", "text": "Google Cloud relies on proprietary, closed-source AI technologies for maximum security benefits."}
+    ],
+    "answer": "B",
+    "explanation": "Google Cloud emphasizes an AI-first approach, integrating AI capabilities across its services and consistently innovating with new models and features. Google also contributes to and supports open-source AI initiatives."
+  },
+  {
+    "number": 6,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company wants a generative AI platform that provides the infrastructure, tools, and pre-trained models needed to build, deploy, and manage its generative AI solutions. Which Google Cloud offering should the company use?",
+    "options": [
+      {"label": "A", "text": "BigQuery"},
+      {"label": "B", "text": "Vertex AI"},
+      {"label": "C", "text": "Google Kubernetes Engine (GKE)"},
+      {"label": "D", "text": "Google Cloud Storage"}
+    ],
+    "answer": "B",
+    "explanation": "Vertex AI is Google Cloud's unified machine learning platform that provides end-to-end support for the ML lifecycle, including access to pre-trained models (foundation models), tools for fine-tuning, deployment, and management of generative AI solutions."
+  },
+  {
+    "number": 7,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A highly regulated financial institution wants to use Gemini as the core decision engine for a loan approval system that will deterministically approve or reject loan applications based on a strict set of predefined criteria. Why is this an inappropriate use case for Gemini?",
+    "options": [
+      {"label": "A", "text": "Gemini cannot integrate with required financial databases."},
+      {"label": "B", "text": "Gemini is not equipped to handle structured numerical data for financial assessments."},
+      {"label": "C", "text": "Gemini is designed for flexible content generation and inference, not rigid rule-based decisions."},
+      {"label": "D", "text": "Gemini deployment for this scenario would be too expensive and complex."}
+    ],
+    "answer": "C",
+    "explanation": "Gemini, as a large language model, excels at flexible content generation, summarization, understanding, and inference. However, it is not designed for deterministic, rule-based decision-making that requires absolute consistency and adherence to strict, predefined criteria, as is common in highly regulated financial systems like loan approvals."
+  },
+  {
+    "number": 8,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company wants to adopt generative AI and is concerned about vendor lock-in. They want to maintain flexibility in their technology stack. What Google Cloud strength would ease their concerns?",
+    "options": [
+      {"label": "A", "text": "Google Cloud's AI solutions have an open approach that supports customer choice across offerings."},
+      {"label": "B", "text": "Google Cloud's AI solutions are pre-packaged for easy deployment, eliminating the need for customization and integration efforts."},
+      {"label": "C", "text": "Google Cloud's strict adherence to proprietary technologies ensures the highest level of security and performance."},
+      {"label": "D", "text": "Google Cloud's focus on automation aims to replace human jobs with AI systems, potentially leading to significant workforce reductions."}
+    ],
+    "answer": "A",
+    "explanation": "Google Cloud promotes an open and flexible approach to its AI offerings, supporting open standards, open-source initiatives (like TensorFlow, Kubernetes, and Gemma), and providing various integration options. This helps alleviate vendor lock-in concerns."
+  },
+  {
+    "number": 9,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What will Google Cloud's Agent Assist help a company achieve?",
+    "options": [
+      {"label": "A", "text": "The infrastructure to provide an enterprise-grade contact center solution with omnichannel support, routing, and integration with CRM systems."},
+      {"label": "B", "text": "The ability to analyze conversational data to identify customer sentiment, common topics of discussion, and insights into agent performance and customer experience."},
+      {"label": "C", "text": "The ability to provide real-time assistance and recommended responses to live customer service agents during their interactions."},
+      {"label": "D", "text": "The ability to build and deploy deterministic and generative chatbot agents for automated customer support."}
+    ],
+    "answer": "C",
+    "explanation": "Google Cloud's Agent Assist is specifically designed to augment human customer service agents. It provides real-time suggestions, retrieves relevant information, and offers recommended responses to agents during live interactions, improving their efficiency and consistency."
+  },
+  {
+    "number": 10,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A software development team wants to use generative AI (gen AI) to code faster so they can launch their software prototype quicker. What should the team do?",
+    "options": [
+      {"label": "A", "text": "Use gen AI to refactor and optimize existing code."},
+      {"label": "B", "text": "Use gen AI to suggest code snippets and complete functions."},
+      {"label": "C", "text": "Use gen AI to automatically generate comprehensive documentation for their code."},
+      {"label": "D", "text": "Use gen AI to identify potential bugs and security vulnerabilities in their code."}
+    ],
+    "answer": "B",
+    "explanation": "While generative AI can assist with all the options listed, its most direct and significant impact on coding faster for a prototype is through code generation. Suggesting code snippets and completing functions directly accelerates the writing of new code, enabling quicker prototyping."
+  },
+  {
+    "number": 11,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What does Vertex AI Search enable companies to do?",
+    "options": [
+      {"label": "A", "text": "To index and retrieve information from the entire public web, providing a comprehensive view of publicly available data."},
+      {"label": "B", "text": "To surface the most popular and frequently accessed content based on global user search patterns and trends."},
+      {"label": "C", "text": "To compare products from numerous online retailers, allowing users to find the best deals and product options across the internet."},
+      {"label": "D", "text": "To ground LLM responses with first-party data, third-party data, and Google's knowledge graph."}
+    ],
+    "answer": "D",
+    "explanation": "Vertex AI Search is designed to enable powerful search experiences over an organization's own data (first-party), external data (third-party), and can leverage Google's knowledge graph to provide more relevant and accurate responses, especially when grounding Large Language Models (LLMs)."
+  },
+  {
+    "number": 12,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A large e-commerce company with a substantial product catalog and many support documents has customers struggling to find information on their website. This leads to high support costs and poor user experience. The company wants a Google Cloud solution to improve website search and reduce support costs while improving customer satisfaction. What Google Cloud product should the company use?",
+    "options": [
+      {"label": "A", "text": "Vertex AI Search"},
+      {"label": "B", "text": "Vertex AI Platform"},
+      {"label": "C", "text": "Google Shopping"},
+      {"label": "D", "text": "Google Search"}
+    ],
+    "answer": "A",
+    "explanation": "Vertex AI Search is ideal for this scenario. It allows companies to build sophisticated search experiences over their own product catalogs and support documents. This improves accuracy and helps customers find what they need, directly addressing high support costs and poor user experience."
+  },
+  {
+    "number": 13,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A financial services company receives a high volume of loan applications daily submitted as scanned documents and PDFs with varying layouts. The manual process of extracting key information is time-consuming and prone to errors. This causes delays in loan processing and impacts customer satisfaction. The company wants to automate the extraction of this critical data to improve efficiency and accuracy. Which Google Cloud tool should they use?",
+    "options": [
+      {"label": "A", "text": "Natural Language API"},
+      {"label": "B", "text": "Dataflow"},
+      {"label": "C", "text": "Vision AI"},
+      {"label": "D", "text": "Document AI API"}
+    ],
+    "answer": "D",
+    "explanation": "Document AI API is specifically designed for intelligent document processing. It uses machine learning to extract structured data from unstructured documents like scanned forms and PDFs, even with varying layouts. This directly addresses the challenge of automating data extraction from loan applications."
+  },
+  {
+    "number": 14,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company is defining their generative AI strategy. They want to follow Google-recommended practices to increase their chances of success. Which strategy should they use?",
+    "options": [
+      {"label": "A", "text": "Rapid implementation strategy"},
+      {"label": "B", "text": "Bottom-up strategy"},
+      {"label": "C", "text": "Multi-directional strategy"},
+      {"label": "D", "text": "Top-down strategy"}
+    ],
+    "answer": "D",
+    "explanation": "Google Cloud often recommends a 'top-down' approach for generative AI strategy. This means starting with clear business objectives and leadership alignment on how generative AI can solve critical business problems, rather than simply experimenting from the bottom up without a clear strategic direction."
+  },
+  {
+    "number": 15,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company wants to use generative AI to create a chatbot that can answer customer questions about their products and services. They need to ensure that the chatbot only uses information from the company's official documentation. What should the company do?",
+    "options": [
+      {"label": "A", "text": "Use role prompting."},
+      {"label": "B", "text": "Adjust the temperature parameter."},
+      {"label": "C", "text": "Use prompt chaining."},
+      {"label": "D", "text": "Use grounding."}
+    ],
+    "answer": "D",
+    "explanation": "Grounding is the technique of 'grounding' the LLM's responses in specific, authoritative data sources (like the company's official documentation). This prevents the model from 'hallucinating' or providing information outside of the approved knowledge base, ensuring accuracy and relevance."
+  },
+  {
+    "number": 16,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company is developing an AI character for a video game. The AI character needs to learn how to navigate a complex environment and make decisions to achieve certain objectives within the game. When the AI takes actions that lead to positive outcomes, like finding a reward or overcoming an obstacle, it receives a positive score. When it takes actions that lead to negative outcomes, like hitting a wall or losing progress, it receives a negative score. Through this process of trial and error, the AI gradually improves the character's ability to play the game effectively. What machine learning should the company use?",
+    "options": [
+      {"label": "A", "text": "Reinforcement learning"},
+      {"label": "B", "text": "Unsupervised learning"},
+      {"label": "C", "text": "Supervised learning"},
+      {"label": "D", "text": "Deep learning"}
+    ],
+    "answer": "A",
+    "explanation": "This scenario perfectly describes reinforcement learning. In reinforcement learning, an agent learns to make decisions by interacting with an environment, receiving rewards for desirable actions and penalties for undesirable ones, and iteratively improving its behavior through trial and error to maximize cumulative reward."
+  },
+  {
+    "number": 17,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A retail company with a large online catalog wants to improve customer experience and drive sales by implementing multimodal search capabilities (image, voice, and text). What is a primary business benefit of this capability?",
+    "options": [
+      {"label": "A", "text": "Improved customer engagement and product discovery leading to increased satisfaction and potential sales."},
+      {"label": "B", "text": "Reduced dependency on keyword optimization for product listings and improved search engine rankings."},
+      {"label": "C", "text": "Lowered operational costs associated with managing and updating product information across different platforms and channels."},
+      {"label": "D", "text": "Streamlined inventory management processes and more accurate demand forecasting for popular items."}
+    ],
+    "answer": "A",
+    "explanation": "Multimodal search directly enhances the customer experience by allowing them to find products using various intuitive methods (images, voice, text). This leads to easier product discovery, higher engagement, and ultimately increased customer satisfaction and potential sales."
+  },
+  {
+    "number": 18,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company wants to create an AI-powered educational solution that provides personalized learning experiences for students. This platform will assess a student's knowledge, recommend relevant learning materials, and generate personalized exercises. The application would provide the structure for lessons and track progress. What type of AI solution should they use?",
+    "options": [
+      {"label": "A", "text": "An AI-powered recommendation system for learning resources"},
+      {"label": "B", "text": "A large language model fine-tuned on educational content"},
+      {"label": "C", "text": "A learning management system (LMS)"},
+      {"label": "D", "text": "A customized learning agent"}
+    ],
+    "answer": "D",
+    "explanation": "The request goes beyond just recommendations or content generation. It involves assessing knowledge, recommending materials, generating personalized exercises, providing lesson structure, and tracking progress. This implies a comprehensive, intelligent system that acts as an assistant or tutor for the student, which is best described as a customized learning agent."
+  },
+  {
+    "number": 19,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is a primary benefit of using a multi-agent system?",
+    "options": [
+      {"label": "A", "text": "To simplify the most basic and repetitive rule-based tasks."},
+      {"label": "B", "text": "To consolidate all unique AI functions into a single, undifferentiated model."},
+      {"label": "C", "text": "To serve as a platform for hosting traditional, non-AI applications."},
+      {"label": "D", "text": "To manage complex tasks that demand coordinated AI functions."}
+    ],
+    "answer": "D",
+    "explanation": "Multi-agent systems are designed to tackle complex problems by breaking them down into sub-tasks, where each agent specializes in a specific function. These agents then coordinate and collaborate to achieve a larger, more intricate goal that a single, monolithic AI model might struggle with."
+  },
+  {
+    "number": 20,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "An organization needs an AI tool to analyze and summarize lengthy customer feedback text transcripts. You need to choose a Google foundation model with a large context window. What foundation model should the organization choose?",
+    "options": [
+      {"label": "A", "text": "Gemini"},
+      {"label": "B", "text": "CodeGemma"},
+      {"label": "C", "text": "Imagen"},
+      {"label": "D", "text": "Chirp"}
+    ],
+    "answer": "A",
+    "explanation": "Gemini models are known for their large context windows, making them highly suitable for processing and summarizing lengthy texts like customer feedback transcripts. CodeGemma is specialized for code, Imagen for image generation, and Chirp for speech."
+  },
+  {
+    "number": 21,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A software developer needs a highly efficient, open-source large language model that can be fine-tuned on a local machine for rapid prototyping of a chatbot application. They require a model that offers strong performance in natural language understanding and generation, while being lightweight enough to run on limited hardware. Which Google-developed family of models should they use?",
+    "options": [
+      {"label": "A", "text": "Veo"},
+      {"label": "B", "text": "Gemini"},
+      {"label": "C", "text": "Gemma"},
+      {"label": "D", "text": "Imagen"}
+    ],
+    "answer": "C",
+    "explanation": "Gemma is Google's family of lightweight, state-of-the-art open models, built from the same research and technology used to create the Gemini models. They are designed for developers to build innovative AI applications on their local machines or in the cloud, offering a balance of performance and efficiency suitable for limited hardware and rapid prototyping."
+  },
+  {
+    "number": 22,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "An organization wants granular control over who can use and see their generative AI models and related resources on Google Cloud. Which Google Cloud security offering is specifically for this purpose?",
+    "options": [
+      {"label": "A", "text": "Identity and Access Management"},
+      {"label": "B", "text": "Secure-by-design infrastructure"},
+      {"label": "C", "text": "Security Command Center"},
+      {"label": "D", "text": "Workload monitoring tools"}
+    ],
+    "answer": "A",
+    "explanation": "Identity and Access Management (IAM) is the fundamental Google Cloud service that allows you to define who has what access to which resources. It provides granular control over permissions for users, groups, and service accounts, including access to generative AI models and related data."
+  },
+  {
+    "number": 23,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company is developing a conversational AI chatbot. They need to ensure the chatbot can engage in human-like conversations and provide accurate information. What should they do to enhance the chatbot's ability to understand and respond effectively to user prompts?",
+    "options": [
+      {"label": "A", "text": "Use prompt engineering techniques, like few-shot prompting, to provide the chatbot with examples of successful interactions."},
+      {"label": "B", "text": "Limit the chatbot's training data to prevent it from learning irrelevant information."},
+      {"label": "C", "text": "Use strict keyword matching to ensure that the chatbot only responds to specific commands."},
+      {"label": "D", "text": "Lower model temperature setting to produce more consistent and predictable responses."}
+    ],
+    "answer": "A",
+    "explanation": "Prompt engineering, especially techniques like few-shot prompting (providing examples of desired input-output pairs), is crucial for guiding a generative AI model to understand context and generate relevant, human-like responses."
+  },
+  {
+    "number": 24,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A human resources team is implementing a new generative AI application to assist the department in screening a large volume of job applications. They want to ensure fairness and build trust with potential candidates. What should the team prioritize?",
+    "options": [
+      {"label": "A", "text": "Integrating the AI application with various job boards to maximize candidate reach."},
+      {"label": "B", "text": "Focusing on minimizing the processing time for each application to improve efficiency."},
+      {"label": "C", "text": "Ensuring AI operates transparently, especially regarding application evaluation and data usage."},
+      {"label": "D", "text": "Ensuring that the AI application can automatically rank all candidates without requiring human review."}
+    ],
+    "answer": "C",
+    "explanation": "To ensure fairness and build trust, especially in sensitive areas like job applications, transparency in how AI evaluates applications and uses data is paramount. This involves understanding potential biases, explaining decisions (where possible), and ensuring human oversight."
+  },
+  {
+    "number": 25,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company's large learning model (LLM) is producing hallucinations that are a result of the Knowledge cutoff. How does retrieval-augmented generation (RAG) overcome this limitation?",
+    "options": [
+      {"label": "A", "text": "RAG fine-tunes the LLM on specific customer query patterns to improve the speed and efficiency of response generation."},
+      {"label": "B", "text": "RAG enhances the creative writing capabilities of the LLM to generate more engaging and informative responses."},
+      {"label": "C", "text": "RAG enables the LLM to retrieve relevant and up-to-date information from knowledge sources."},
+      {"label": "D", "text": "RAG uses human oversight to ensure accuracy before presenting information to the customer."}
+    ],
+    "answer": "C",
+    "explanation": "The primary purpose of RAG is to address the 'knowledge cutoff' and hallucination issues of LLMs. It does this by retrieving relevant, up-to-date information from external knowledge sources (like databases or documents) at inference time and then using this retrieved information to ground the LLM's generation."
+  },
+  {
+    "number": 26,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "An organization with a team of live customer service agents wants to improve agent efficiency and customer satisfaction during support interactions. They are looking for a tool that can provide real-time guidance to agents, suggest helpful information, and streamline the support process without fully automating customer conversations. Which component of Google's Customer Engagement Suite should they use?",
+    "options": [
+      {"label": "A", "text": "Agent Assist"},
+      {"label": "B", "text": "Conversational Agents"},
+      {"label": "C", "text": "Conversational Insights"},
+      {"label": "D", "text": "Google Cloud Contact Center as a Service"}
+    ],
+    "answer": "A",
+    "explanation": "Agent Assist is specifically designed for real-time support to human agents, providing them with suggestions and relevant information during live customer interactions. Conversational Agents (chatbots) automate interactions, Conversational Insights analyze conversations after they occur, and Contact Center as a Service is the broader infrastructure."
+  },
+  {
+    "number": 27,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A financial institution uses generative AI (gen AI) to approve and reject loan applications, but gives no reasons for rejection. Customers are starting to file complaints. The company needs to implement a solution to reduce the complaints. What should the company do?",
+    "options": [
+      {"label": "A", "text": "Collect a larger and more diverse dataset for the gen AI model."},
+      {"label": "B", "text": "Implement explainable gen AI policies."},
+      {"label": "C", "text": "Fine-tune the gen AI model."},
+      {"label": "D", "text": "Develop fairness assessments for the gen AI model."}
+    ],
+    "answer": "B",
+    "explanation": "The core problem is the lack of reasons for rejection, leading to customer complaints. This falls under the domain of explainable AI (XAI). Implementing explainable gen AI policies or mechanisms would allow the institution to provide transparency into how the AI made its decision."
+  },
+  {
+    "number": 28,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A large multinational corporation with geographically dispersed teams struggles with knowledge silos and inconsistent access to crucial internal information. What is a key business benefit of using Google Agentspace in this scenario?",
+    "options": [
+      {"label": "A", "text": "Improved IT infrastructure management across offices."},
+      {"label": "B", "text": "Seamless knowledge sharing and collaboration across internal systems."},
+      {"label": "C", "text": "Enhanced data encryption and compliance for internal communications."},
+      {"label": "D", "text": "Automation of employee performance reviews using AI."}
+    ],
+    "answer": "B",
+    "explanation": "Google Agentspace aims to connect and orchestrate various AI capabilities and data sources. In a scenario with knowledge silos, a key benefit would be to enable seamless knowledge sharing and collaboration by allowing agents to access, process, and disseminate information across different internal systems and teams."
+  },
+  {
+    "number": 29,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is the definition of generative AI?",
+    "options": [
+      {"label": "A", "text": "A type of artificial intelligence that enables a system to autonomously learn and improve using neural networks and deep learning."},
+      {"label": "B", "text": "A type of artificial intelligence that can create new content and ideas, including text, images, music, and code."},
+      {"label": "C", "text": "A type of machine learning algorithm inspired by the human brain that is made up of interconnected nodes."},
+      {"label": "D", "text": "A type of predictive model that estimates a relationship by fitting a line to the observed data."}
+    ],
+    "answer": "B",
+    "explanation": "The defining characteristic of generative AI is its ability to create new, original content that resembles its training data. This includes various modalities like text, images, music, and code, rather than just classifying, predicting, or analyzing existing data."
+  },
+  {
+    "number": 30,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A marketing team wants to use a foundation model to create social media and advertising campaigns. They want to create written articles and images from text. They lack deep AI expertise and need a versatile solution. Which Google foundation model should they use?",
+    "options": [
+      {"label": "A", "text": "Gemma"},
+      {"label": "B", "text": "Imagen"},
+      {"label": "C", "text": "Gemini"},
+      {"label": "D", "text": "Veo"}
+    ],
+    "answer": "C",
+    "explanation": "Gemini is Google's most advanced and multimodal foundation model, capable of understanding and generating various forms of content, including text and images, from a single prompt. Its versatility makes it suitable for marketing teams that need to create diverse campaign materials without deep AI expertise."
+  },
+  {
+    "number": 31,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company has a machine learning project that involves diverse data types like streaming data and structured databases. How does Google Cloud support data gathering for this project?",
+    "options": [
+      {"label": "A", "text": "Google Cloud provides tools such as Pub/Sub, Cloud Storage, and Cloud SQL."},
+      {"label": "B", "text": "The Gemini app is the primary Google Cloud tool for directly collecting data."},
+      {"label": "C", "text": "Google Cloud's strengths are in the data analysis tools such as BigQuery."},
+      {"label": "D", "text": "Google Cloud relies on Vertex AI to connect to external data."}
+    ],
+    "answer": "A",
+    "explanation": "Google Cloud offers a comprehensive suite of services for data ingestion and storage. Pub/Sub is for streaming data, Cloud Storage for various file types, and Cloud SQL for relational structured databases."
+  },
+  {
+    "number": 32,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "What is an example of unsupervised machine learning?",
+    "options": [
+      {"label": "A", "text": "Analyzing customer purchase patterns to identify natural groupings."},
+      {"label": "B", "text": "Training a system to recognize product images using labeled categories."},
+      {"label": "C", "text": "Predicting subscription renewal based on past renewal status data."},
+      {"label": "D", "text": "Forecasting sales figures using historical sales and marketing spend."}
+    ],
+    "answer": "A",
+    "explanation": "Unsupervised learning deals with unlabeled data. Identifying 'natural groupings' or clusters in customer purchase patterns without pre-defined labels is a classic example of unsupervised learning (clustering)."
+  },
+  {
+    "number": 33,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A large e-commerce company with a vast and frequently updated product catalog finds that customers struggle to find products on their website, and support agents spend too much time finding detailed product information. The company wants to improve search accuracy and efficiency for both customers and support. What Google Cloud solution should they use?",
+    "options": [
+      {"label": "A", "text": "Vertex AI Conversation"},
+      {"label": "B", "text": "Vertex AI Natural Language API"},
+      {"label": "C", "text": "Pre-built RAG with Vertex AI Search"},
+      {"label": "D", "text": "Vertex AI Model Garden"}
+    ],
+    "answer": "C",
+    "explanation": "This scenario points to the need for accurate and up-to-date information retrieval from a product catalog. Pre-built RAG (Retrieval-Augmented Generation) combined with Vertex AI Search is the ideal solution for grounding responses with the latest product information."
+  },
+  {
+    "number": 34,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company's development team is eager to start building generative AI solutions with Google Cloud, but has limited experience in AI development. They need to launch their gen AI solution quickly. What Google Cloud benefit would help the company achieve their goal?",
+    "options": [
+      {"label": "A", "text": "Google Cloud's pre-trained models and low- and no-code AI tools and services."},
+      {"label": "B", "text": "Google Cloud's collaborative AI community and support forums connect developers with AI experts."},
+      {"label": "C", "text": "Google Cloud's comprehensive training materials and tutorials to help developers."},
+      {"label": "D", "text": "Google Cloud's focus on continuous improvement provides access to the latest AI tools, features, and best practices."}
+    ],
+    "answer": "A",
+    "explanation": "For a team with limited AI experience needing to launch quickly, leveraging pre-trained models (foundation models) and low-code/no-code tools significantly reduces the development burden and accelerates time to market."
+  },
+  {
+    "number": 35,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A development team is building an internal knowledge base chatbot to answer employee questions about company policies and procedures. This information is stored across various documents in Google Cloud Storage and is updated regularly by different departments. What is the primary benefit of using Google Cloud's RAG APIs in this scenario?",
+    "options": [
+      {"label": "A", "text": "They provide a pre-built user interface for the chatbot, simplifying the front-end development process."},
+      {"label": "B", "text": "They allow the development team to train a single foundation model on all company documents."},
+      {"label": "C", "text": "They enable the generative AI model to retrieve the most up-to-date and relevant information from the policy documents in real-time."},
+      {"label": "D", "text": "They automatically create summaries of all company policies, which are then presented to employees as quick answers."}
+    ],
+    "answer": "C",
+    "explanation": "The primary benefit of RAG is its ability to ensure the chatbot provides accurate and up-to-date information. By retrieving relevant and recent policy documents from Cloud Storage in real-time and grounding the LLM's response with this information, the chatbot avoids hallucinating or providing outdated answers."
+  },
+  {
+    "number": 36,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A security team needs a centralized platform to gain a comprehensive overview of their organization's security health across their entire Google Cloud environment, including potential threats to their generative AI deployments. Which Google Cloud security offering is specifically for this purpose?",
+    "options": [
+      {"label": "A", "text": "Workload monitoring tools"},
+      {"label": "B", "text": "Security Command Center"},
+      {"label": "C", "text": "Identity and Access Management"},
+      {"label": "D", "text": "Secure-by-design infrastructure"}
+    ],
+    "answer": "B",
+    "explanation": "Security Command Center is Google Cloud's comprehensive security management and data risk platform. It provides centralized visibility into security posture, identifies vulnerabilities, detects threats, and helps manage compliance across the entire Google Cloud environment."
+  },
+  {
+    "number": 37,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A company wants to use an AI agent to automate some tasks. They want everyone to understand the different functions of an AI agent. What is the function of an AI agent in the context of gen AI?",
+    "options": [
+      {"label": "A", "text": "To provide the computational resources needed to train and run gen AI models."},
+      {"label": "B", "text": "To store and manage large datasets used for training and running gen AI models."},
+      {"label": "C", "text": "To provide a user-friendly interface for interacting with gen AI models."},
+      {"label": "D", "text": "To analyze situations, use multiple tools, and make informed decisions without requiring constant human input."}
+    ],
+    "answer": "D",
+    "explanation": "An AI agent, especially in the context of generative AI, is designed to be more autonomous and capable. Its function is to understand a goal, analyze a situation, leverage various tools (including other generative AI models or external APIs), and make decisions or take actions to achieve that goal."
+  },
+  {
+    "number": 38,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A research team has collected a large dataset of sensor readings from various industrial machines. This dataset includes measurements like temperature, pressure, vibration levels, and electrical current, recorded at regular intervals. The team has not yet assigned any labels or categories to these readings and wants to identify potential anomalies, malfunctions, or natural groupings of machine behavior based on the sensor data alone. What type of machine learning should they use?",
+    "options": [
+      {"label": "A", "text": "Reinforcement learning"},
+      {"label": "B", "text": "Unsupervised learning"},
+      {"label": "C", "text": "Deep learning"},
+      {"label": "D", "text": "Supervised learning"}
+    ],
+    "answer": "B",
+    "explanation": "Since the team has not assigned any labels and wants to identify anomalies, malfunctions, or natural groupings based on the data alone, this is a classic unsupervised learning problem. Unsupervised learning techniques like clustering or anomaly detection are used to find hidden patterns in unlabeled data."
+  },
+  {
+    "number": 39,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A social media platform uses a generative AI model to automatically generate summaries of user-submitted posts to provide quick overviews for other users. While the summaries are generally accurate for factual posts, the model occasionally misinterprets sarcasm, satire, or nuanced opinions, leading to summaries that misrepresent the original intent and potentially cause misunderstandings or offense among users. What should the platform do to overcome this limitation of the AI-generated summaries?",
+    "options": [
+      {"label": "A", "text": "Implement stricter safety settings to filter out potentially misinterpreted content altogether."},
+      {"label": "B", "text": "Increase the temperature parameter of the model to encourage more varied and less literal interpretations."},
+      {"label": "C", "text": "Decrease the output length of the summaries to make them more concise."},
+      {"label": "D", "text": "Incorporate a human-in-the-loop (HITL) review process to refine the summaries."}
+    ],
+    "answer": "D",
+    "explanation": "When AI struggles with nuances like sarcasm or satire, human oversight is often the most effective solution. A human-in-the-loop (HITL) process allows human reviewers to check, correct, and refine AI-generated content before it is published."
+  },
+  {
+    "number": 40,
+    "questionType": "single-choice",
+    "type": "Multiple Choice",
+    "text": "A global news agency is developing a generative AI tool to quickly summarize breaking news articles as they emerge online. The goal is to provide their audience with rapid updates on fast-developing stories from various global sources. What Google Cloud solution should they use?",
+    "options": [
+      {"label": "A", "text": "Document AI"},
+      {"label": "B", "text": "BigQuery"},
+      {"label": "C", "text": "Vertex AI Natural Language API"},
+      {"label": "D", "text": "Grounding with Google Search"}
+    ],
+    "answer": "D",
+    "explanation": "For summarizing breaking news articles as they emerge online from various global sources, the generative AI model needs access to current, broad, and rapidly updating information. Grounding with Google Search allows the LLM to pull in the latest information from the web."
+  }
+]
