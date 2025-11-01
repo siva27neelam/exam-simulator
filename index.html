@@ -324,6 +324,12 @@
             font-weight: 600;
         }
 
+        /* added for hotspot wrong selections */
+        .radio-option.incorrect-answer {
+            background: #f8d7da;
+            border: 1px solid #dc3545;
+        }
+
         .options {
             margin-bottom: 30px;
         }
@@ -500,12 +506,12 @@
             min-width: 150px;
         }
 
-        .btn-show-answer {
+        .btn-submit {
             background: #667eea;
             color: white;
         }
 
-        .btn-show-answer:hover:not(:disabled) {
+        .btn-submit:hover:not(:disabled) {
             background: #5568d3;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
@@ -548,6 +554,13 @@
             height: 100%;
             background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
             transition: width 0.3s;
+        }
+
+        /* NEW: score label near buttons */
+        .score-display {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
         }
 
         @media (max-width: 768px) {
@@ -610,6 +623,10 @@
     let currentFile = 'questions-2.json';
     const STORAGE_KEY_PREFIX = 'az900_progress_';
 
+    // NEW: score tracking
+    let correctCount = 0;
+    let attemptCount = 0;
+
     function getStorageKey() {
         return STORAGE_KEY_PREFIX + currentFile.replace('.json', '');
     }
@@ -628,6 +645,16 @@
             questions.forEach((q, index) => {
                 q.number = index + 1;
             });
+
+            // try to restore saved score for this file
+            const saved = getSavedProgress();
+            if (saved) {
+                correctCount = saved.correctCount || 0;
+                attemptCount = saved.attemptCount || 0;
+            } else {
+                correctCount = 0;
+                attemptCount = 0;
+            }
 
             showWelcomeScreen();
         } catch (error) {
@@ -656,6 +683,7 @@
                     <h3>📚 Saved Progress Found</h3>
                     <p><strong>Last Question:</strong> ${progress} of ${questions.length}</p>
                     <p><strong>Progress:</strong> ${percentage}% complete</p>
+                    <p><strong>Saved Score:</strong> ${(savedProgress.correctCount || 0)} / ${(savedProgress.attemptCount || 0)} correct</p>
                     <p><strong>Last Accessed:</strong> ${new Date(savedProgress.timestamp).toLocaleString()}</p>
                 </div>
             `;
@@ -686,6 +714,8 @@
     function startFromBeginning() {
         currentQuestion = 0;
         clearSavedProgress();
+        correctCount = 0;
+        attemptCount = 0;
         document.getElementById('restartBtn').style.display = 'block';
         renderQuestion();
     }
@@ -694,6 +724,8 @@
         const savedProgress = getSavedProgress();
         if (savedProgress) {
             currentQuestion = savedProgress.currentQuestion;
+            correctCount = savedProgress.correctCount || 0;
+            attemptCount = savedProgress.attemptCount || 0;
         }
         document.getElementById('restartBtn').style.display = 'block';
         renderQuestion();
@@ -703,7 +735,9 @@
         const progress = {
             currentQuestion: currentQuestion,
             timestamp: new Date().toISOString(),
-            file: currentFile
+            file: currentFile,
+            correctCount: correctCount,
+            attemptCount: attemptCount
         };
         localStorage.setItem(getStorageKey(), JSON.stringify(progress));
     }
@@ -718,8 +752,10 @@
     }
 
     function restartExam() {
-        if (confirm('Are you sure you want to restart from the beginning? Your current progress will be lost.')) {
+        if (confirm('Are you sure you want to restart from the beginning? Your current progress and score will be lost.')) {
             currentQuestion = 0;
+            correctCount = 0;
+            attemptCount = 0;
             clearSavedProgress();
             renderQuestion();
         }
@@ -768,6 +804,10 @@
 
                 ${questionContent}
 
+                <div class="score-display" id="scoreDisplay">
+                    Score: ${correctCount} / ${attemptCount} correct
+                </div>
+
                 <div class="answer-section" id="answerSection">
                     <div class="answer-label">Correct Answer:</div>
                     <div class="answer-value">${getAnswerDisplay(q)}</div>
@@ -781,7 +821,7 @@
                     <button class="btn btn-prev" id="prevBtn" ${currentQuestion === 0 ? 'disabled' : ''}>
                         Previous
                     </button>
-                    <button class="btn btn-show-answer" id="showAnswerBtn">Show Answer</button>
+                    <button class="btn btn-submit" id="submitBtn">Submit Answer</button>
                     <button class="btn btn-next" id="nextBtn">
                         ${currentQuestion === questions.length - 1 ? 'Finish' : 'Next Question'}
                     </button>
@@ -791,12 +831,35 @@
 
         document.getElementById('content').innerHTML = html;
 
-        document.getElementById('showAnswerBtn').addEventListener('click', showAnswer);
+        document.getElementById('submitBtn').addEventListener('click', submitAnswer);
         document.getElementById('nextBtn').addEventListener('click', nextQuestion);
         document.getElementById('prevBtn').addEventListener('click', prevQuestion);
 
         if (q.questionType === 'drag-drop') {
             setupDragDrop();
+        }
+
+        // single-choice click binding
+        if (q.questionType === 'single-choice') {
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.addEventListener('click', () => {
+                    if (showingAnswer) return;
+                    document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+                    opt.classList.add('selected');
+                });
+            });
+        }
+
+        // multiple-choice click binding
+        if (q.questionType === 'multiple-choice') {
+            document.querySelectorAll('.option').forEach(opt => {
+                const cb = opt.querySelector('input[type="checkbox"]');
+                opt.addEventListener('click', (e) => {
+                    if (showingAnswer) return;
+                    if (e.target === cb) return;
+                    cb.checked = !cb.checked;
+                });
+            });
         }
     }
 
@@ -935,39 +998,109 @@
         return q.answer;
     }
 
-    function showAnswer() {
-        showingAnswer = true;
-        document.getElementById('answerSection').classList.add('visible');
+    function updateScoreDisplay() {
+        const el = document.getElementById('scoreDisplay');
+        if (el) {
+            el.textContent = `Score: ${correctCount} / ${attemptCount} correct`;
+        }
+    }
+
+    function submitAnswer() {
+        if (showingAnswer) return;
 
         const q = questions[currentQuestion];
+        let isCorrect = false;
 
-        if (q.questionType === 'hotspot') {
+        // SINGLE CHOICE
+        if (q.questionType === 'single-choice') {
+            const selected = document.querySelector('.option.selected');
+            if (!selected) {
+                alert('Please select an option.');
+                return;
+            }
+
+            const chosen = selected.dataset.label;
+            const correctAns = q.answer;
+
+            if (chosen === correctAns) {
+                selected.classList.add('correct');
+                isCorrect = true;
+            } else {
+                selected.classList.add('incorrect');
+                // highlight correct
+                document.querySelectorAll('.option').forEach(opt => {
+                    if (opt.dataset.label === correctAns) {
+                        opt.classList.add('correct');
+                    }
+                });
+            }
+
+            // lock
+            document.querySelectorAll('.option').forEach(opt => opt.style.pointerEvents = 'none');
+
+        // MULTIPLE CHOICE
+        } else if (q.questionType === 'multiple-choice') {
+            const checked = Array.from(document.querySelectorAll('.option input[type="checkbox"]:checked'))
+                .map(cb => cb.dataset.label);
+
+            if (checked.length === 0) {
+                alert('Please select at least one option.');
+                return;
+            }
+
+            const correctArr = Array.isArray(q.answer) ? q.answer : [q.answer];
+            const checkedSorted = [...checked].sort();
+            const correctSorted = [...correctArr].sort();
+
+            isCorrect = JSON.stringify(checkedSorted) === JSON.stringify(correctSorted);
+
+            document.querySelectorAll('.option').forEach(opt => {
+                const label = opt.dataset.label;
+                const cb = opt.querySelector('input[type="checkbox"]');
+
+                if (correctArr.includes(label)) {
+                    opt.classList.add('correct');
+                } else if (cb && cb.checked) {
+                    opt.classList.add('incorrect');
+                }
+
+                if (cb) cb.disabled = true;
+            });
+
+        // HOTSPOT (yes/no table)
+        } else if (q.questionType === 'hotspot') {
+            isCorrect = true;
             q.statements.forEach((stmt, idx) => {
                 const radios = document.querySelectorAll(`input[name="stmt${idx}"]`);
-                radios.forEach(radio => {
-                    const parent = radio.parentElement;
-                    if (radio.value === stmt.answer) {
+                let chosenVal = null;
+                radios.forEach(r => {
+                    if (r.checked) chosenVal = r.value;
+                });
+
+                // highlight correct
+                radios.forEach(r => {
+                    const parent = r.parentElement;
+                    if (r.value === stmt.answer) {
                         parent.classList.add('correct-answer');
                     }
-                    radio.disabled = true;
                 });
-            });
-        } else if (q.questionType === 'single-choice') {
-            document.querySelectorAll('.option').forEach(opt => {
-                const label = opt.dataset.label;
-                if (label === q.answer) {
-                    opt.classList.add('correct');
+
+                if (chosenVal !== stmt.answer) {
+                    isCorrect = false;
+                    radios.forEach(r => {
+                        if (r.checked && r.value !== stmt.answer) {
+                            r.parentElement.classList.add('incorrect-answer');
+                        }
+                    });
                 }
+
+                // lock
+                radios.forEach(r => r.disabled = true);
             });
-        } else if (q.questionType === 'multiple-choice') {
-            document.querySelectorAll('.option').forEach(opt => {
-                const label = opt.dataset.label;
-                if (q.answer.includes(label)) {
-                    opt.classList.add('correct');
-                }
-                opt.querySelector('input').disabled = true;
-            });
+
+        // DRAG & DROP
         } else if (q.questionType === 'drag-drop') {
+            isCorrect = true;
             document.querySelectorAll('.drop-zone').forEach(zone => {
                 const desc = zone.dataset.description;
                 const droppedItem = zone.dataset.droppedItem;
@@ -975,11 +1108,32 @@
 
                 if (droppedItem === correctItem) {
                     zone.classList.add('correct');
-                } else if (droppedItem) {
+                } else {
                     zone.classList.add('incorrect');
+                    isCorrect = false;
                 }
             });
+
+            // lock drag items
+            document.querySelectorAll('.drag-item').forEach(item => item.draggable = false);
         }
+
+        // update score
+        attemptCount++;
+        if (isCorrect) {
+            correctCount++;
+        }
+        updateScoreDisplay();
+        saveProgress();
+
+        document.getElementById('answerSection').classList.add('visible');
+
+        const submitBtn = document.getElementById('submitBtn');
+        if (submitBtn) {
+            submitBtn.disabled = true;
+        }
+
+        showingAnswer = true;
     }
 
     function nextQuestion() {
@@ -988,7 +1142,8 @@
             renderQuestion();
         } else {
             clearSavedProgress();
-            alert(`Congratulations! You've completed all ${questions.length} questions!`);
+            alert(`Congratulations! You've completed all ${questions.length} questions!
+Your final score: ${correctCount} / ${attemptCount} correct`);
             showWelcomeScreen();
         }
     }
@@ -1000,22 +1155,16 @@
         }
     }
 
-    document.addEventListener('click', (e) => {
-        if (e.target.closest('.option') && !e.target.closest('.option').dataset.multiple) {
-            const option = e.target.closest('.option');
-            if (!showingAnswer) {
-                document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
-                option.classList.add('selected');
-            }
-        }
-    });
-
     document.getElementById('restartBtn').addEventListener('click', restartExam);
 
     document.getElementById('fileSelector').addEventListener('change', (e) => {
         const newFile = e.target.value;
-        if (confirm(`Switch to ${newFile}? Your current progress will be saved.`)) {
+        if (confirm(`Switch to ${newFile}? Your current progress will be saved, but score will reset.`)) {
+            // save current progress
             saveProgress();
+            // reset score for new file
+            correctCount = 0;
+            attemptCount = 0;
             loadQuestions(newFile);
         } else {
             e.target.value = currentFile;
