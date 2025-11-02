@@ -324,7 +324,6 @@
             font-weight: 600;
         }
 
-        /* added for hotspot wrong selections */
         .radio-option.incorrect-answer {
             background: #f8d7da;
             border: 1px solid #dc3545;
@@ -556,11 +555,188 @@
             transition: width 0.3s;
         }
 
-        /* NEW: score label near buttons */
         .score-display {
             font-weight: 600;
             color: #2d3748;
             margin-bottom: 10px;
+        }
+
+        /* Results page styles */
+        .results-container {
+            padding: 30px;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            color: white;
+        }
+
+        .results-header h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .results-score {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .results-percentage {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .results-status {
+            font-size: 20px;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .incorrect-questions {
+            margin-top: 30px;
+        }
+
+        .incorrect-questions h3 {
+            font-size: 24px;
+            color: #2d3748;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .incorrect-question-card {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .incorrect-question-header {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .incorrect-question-number {
+            background: #e53e3e;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .incorrect-question-type {
+            background: #4a5568;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .incorrect-question-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+
+        .incorrect-answer-section {
+            margin-top: 10px;
+        }
+
+        .incorrect-option {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .incorrect-option.user-wrong {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            color: #721c24;
+        }
+
+        .incorrect-option.correct-answer {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+            font-weight: 600;
+        }
+
+        .incorrect-option-label {
+            font-weight: 700;
+            min-width: 20px;
+        }
+
+        .answer-explanation {
+            background: #e6f0ff;
+            border-left: 4px solid #667eea;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+
+        .hotspot-review {
+            margin-top: 10px;
+        }
+
+        .hotspot-statement {
+            padding: 8px;
+            margin-bottom: 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .hotspot-statement.incorrect {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+
+        .hotspot-answers {
+            display: flex;
+            gap: 10px;
+            margin-top: 4px;
+            font-size: 12px;
+        }
+
+        .hotspot-answer {
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .hotspot-answer.wrong {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .hotspot-answer.correct {
+            background: #d4edda;
+            color: #155724;
+            font-weight: 600;
+        }
+
+        .results-actions {
+            margin-top: 30px;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -578,6 +754,14 @@
 
             .welcome-buttons {
                 flex-direction: column;
+            }
+
+            .results-score {
+                font-size: 36px;
+            }
+
+            .results-percentage {
+                font-size: 20px;
             }
         }
     </style>
@@ -624,9 +808,9 @@
     let currentFile = 'questions-2.json';
     const STORAGE_KEY_PREFIX = 'az900_progress_';
 
-    // NEW: score tracking
     let correctCount = 0;
     let attemptCount = 0;
+    let incorrectQuestions = [];
 
     function getStorageKey() {
         return STORAGE_KEY_PREFIX + currentFile.replace('.json', '');
@@ -647,14 +831,15 @@
                 q.number = index + 1;
             });
 
-            // try to restore saved score for this file
             const saved = getSavedProgress();
             if (saved) {
                 correctCount = saved.correctCount || 0;
                 attemptCount = saved.attemptCount || 0;
+                incorrectQuestions = saved.incorrectQuestions || [];
             } else {
                 correctCount = 0;
                 attemptCount = 0;
+                incorrectQuestions = [];
             }
 
             showWelcomeScreen();
@@ -717,6 +902,7 @@
         clearSavedProgress();
         correctCount = 0;
         attemptCount = 0;
+        incorrectQuestions = [];
         document.getElementById('restartBtn').style.display = 'block';
         renderQuestion();
     }
@@ -727,6 +913,7 @@
             currentQuestion = savedProgress.currentQuestion;
             correctCount = savedProgress.correctCount || 0;
             attemptCount = savedProgress.attemptCount || 0;
+            incorrectQuestions = savedProgress.incorrectQuestions || [];
         }
         document.getElementById('restartBtn').style.display = 'block';
         renderQuestion();
@@ -738,7 +925,8 @@
             timestamp: new Date().toISOString(),
             file: currentFile,
             correctCount: correctCount,
-            attemptCount: attemptCount
+            attemptCount: attemptCount,
+            incorrectQuestions: incorrectQuestions
         };
         localStorage.setItem(getStorageKey(), JSON.stringify(progress));
     }
@@ -757,9 +945,141 @@
             currentQuestion = 0;
             correctCount = 0;
             attemptCount = 0;
+            incorrectQuestions = [];
             clearSavedProgress();
             renderQuestion();
         }
+    }
+
+    function showResultsPage() {
+        const percentage = Math.round((correctCount / attemptCount) * 100);
+        const passPercentage = 70;
+        const passed = percentage >= passPercentage;
+
+        let html = `
+            <div class="results-container">
+                <div class="results-header">
+                    <h2>${passed ? '🎉 Congratulations!' : '📚 Keep Learning!'}</h2>
+                    <div class="results-score">${correctCount} / ${attemptCount}</div>
+                    <div class="results-percentage">${percentage}%</div>
+                    <div class="results-status">
+                        ${passed ? '✅ PASSED' : '❌ NEEDS IMPROVEMENT'} (Pass: ${passPercentage}%)
+                    </div>
+                </div>
+
+                ${incorrectQuestions.length > 0 ? `
+                    <div class="incorrect-questions">
+                        <h3>❌ Review Incorrect Answers (${incorrectQuestions.length} question${incorrectQuestions.length > 1 ? 's' : ''})</h3>
+                        ${incorrectQuestions.map(q => renderIncorrectQuestion(q)).join('')}
+                    </div>
+                ` : `
+                    <div style="text-align: center; padding: 40px; background: #d4edda; border-radius: 8px; color: #155724;">
+                        <h3 style="font-size: 24px; margin-bottom: 10px;">Perfect Score! 🌟</h3>
+                        <p>You answered all questions correctly!</p>
+                    </div>
+                `}
+
+                <div class="results-actions">
+                    <button class="btn-welcome btn-start" onclick="startFromBeginning()">
+                        Start New Test
+                    </button>
+                </div>
+            </div>
+        `;
+
+        document.getElementById('content').innerHTML = html;
+        document.getElementById('currentQ').textContent = '-';
+        document.getElementById('totalQ').textContent = questions.length;
+    }
+
+    function renderIncorrectQuestion(q) {
+        let answerHtml = '';
+
+        if (q.questionType === 'single-choice' || q.questionType === 'multiple-choice') {
+            const userAnswers = q.userAnswer.split(', ');
+            const correctAnswers = q.correctAnswer.split(', ');
+
+            answerHtml = `
+                <div class="incorrect-answer-section">
+                    ${q.options.map(opt => {
+                        const isUserAnswer = userAnswers.includes(opt.label);
+                        const isCorrect = correctAnswers.includes(opt.label);
+
+                        if (isUserAnswer && !isCorrect) {
+                            return `
+                                <div class="incorrect-option user-wrong">
+                                    <span class="incorrect-option-label">${opt.label}.</span>
+                                    <span>${opt.text} (Your answer ❌)</span>
+                                </div>
+                            `;
+                        } else if (isCorrect) {
+                            return `
+                                <div class="incorrect-option correct-answer">
+                                    <span class="incorrect-option-label">${opt.label}.</span>
+                                    <span>${opt.text} (Correct ✅)</span>
+                                </div>
+                            `;
+                        }
+                        return '';
+                    }).join('')}
+                </div>
+            `;
+        } else if (q.questionType === 'hotspot') {
+            answerHtml = `
+                <div class="hotspot-review">
+                    ${q.statements.map((stmt, idx) => {
+                        const isIncorrect = stmt.userAnswer !== stmt.correctAnswer;
+                        return `
+                            <div class="hotspot-statement ${isIncorrect ? 'incorrect' : ''}">
+                                <div><strong>Statement ${idx + 1}:</strong> ${stmt.text}</div>
+                                <div class="hotspot-answers">
+                                    <span class="hotspot-answer ${isIncorrect ? 'wrong' : ''}">
+                                        Your answer: ${stmt.userAnswer}
+                                    </span>
+                                    ${isIncorrect ? `
+                                        <span class="hotspot-answer correct">
+                                            Correct: ${stmt.correctAnswer}
+                                        </span>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        } else if (q.questionType === 'drag-drop') {
+            answerHtml = `
+                <div class="incorrect-answer-section">
+                    <div style="font-size: 13px; margin-bottom: 8px;"><strong>Correct matches:</strong></div>
+                    ${Object.entries(q.matches).map(([item, desc]) => {
+                        const userMatch = q.userMatches[item];
+                        const isCorrect = userMatch === desc;
+                        return `
+                            <div class="incorrect-option ${isCorrect ? '' : 'user-wrong'}">
+                                ${item} → ${desc}
+                                ${!isCorrect ? ` (You matched: ${userMatch || 'Not matched'})` : ''}
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+
+        return `
+            <div class="incorrect-question-card">
+                <div class="incorrect-question-header">
+                    <span class="incorrect-question-number">Q${q.questionNumber}</span>
+                    <span class="incorrect-question-type">${q.questionType}</span>
+                </div>
+                <div class="incorrect-question-text">${q.questionText}</div>
+                ${answerHtml}
+                ${q.explanation ? `
+                    <div class="answer-explanation">
+                        <strong>Explanation:</strong> ${q.explanation}
+                    </div>
+                ` : ''}
+            </div>
+        `;
     }
 
     function renderQuestion() {
@@ -840,7 +1160,6 @@
             setupDragDrop();
         }
 
-        // single-choice click binding
         if (q.questionType === 'single-choice') {
             document.querySelectorAll('.option').forEach(opt => {
                 opt.addEventListener('click', () => {
@@ -851,7 +1170,6 @@
             });
         }
 
-        // multiple-choice click binding
         if (q.questionType === 'multiple-choice') {
             document.querySelectorAll('.option').forEach(opt => {
                 const cb = opt.querySelector('input[type="checkbox"]');
@@ -1012,7 +1330,6 @@
         const q = questions[currentQuestion];
         let isCorrect = false;
 
-        // SINGLE CHOICE
         if (q.questionType === 'single-choice') {
             const selected = document.querySelector('.option.selected');
             if (!selected) {
@@ -1028,7 +1345,6 @@
                 isCorrect = true;
             } else {
                 selected.classList.add('incorrect');
-                // highlight correct
                 document.querySelectorAll('.option').forEach(opt => {
                     if (opt.dataset.label === correctAns) {
                         opt.classList.add('correct');
@@ -1036,10 +1352,8 @@
                 });
             }
 
-            // lock
             document.querySelectorAll('.option').forEach(opt => opt.style.pointerEvents = 'none');
 
-        // MULTIPLE CHOICE
         } else if (q.questionType === 'multiple-choice') {
             const checked = Array.from(document.querySelectorAll('.option input[type="checkbox"]:checked'))
                 .map(cb => cb.dataset.label);
@@ -1068,7 +1382,6 @@
                 if (cb) cb.disabled = true;
             });
 
-        // HOTSPOT (yes/no table)
         } else if (q.questionType === 'hotspot') {
             isCorrect = true;
             q.statements.forEach((stmt, idx) => {
@@ -1078,7 +1391,6 @@
                     if (r.checked) chosenVal = r.value;
                 });
 
-                // highlight correct
                 radios.forEach(r => {
                     const parent = r.parentElement;
                     if (r.value === stmt.answer) {
@@ -1095,11 +1407,9 @@
                     });
                 }
 
-                // lock
                 radios.forEach(r => r.disabled = true);
             });
 
-        // DRAG & DROP
         } else if (q.questionType === 'drag-drop') {
             isCorrect = true;
             document.querySelectorAll('.drop-zone').forEach(zone => {
@@ -1115,14 +1425,57 @@
                 }
             });
 
-            // lock drag items
             document.querySelectorAll('.drag-item').forEach(item => item.draggable = false);
         }
 
-        // update score
         attemptCount++;
         if (isCorrect) {
             correctCount++;
+        } else {
+            const incorrectRecord = {
+                questionNumber: q.number,
+                questionType: q.questionType,
+                questionText: q.text,
+                correctAnswer: null,
+                userAnswer: null
+            };
+
+            if (q.questionType === 'single-choice') {
+                const selected = document.querySelector('.option.selected');
+                incorrectRecord.userAnswer = selected ? selected.dataset.label : 'No answer';
+                incorrectRecord.correctAnswer = q.answer;
+                incorrectRecord.options = q.options;
+            } else if (q.questionType === 'multiple-choice') {
+                const checked = Array.from(document.querySelectorAll('.option input[type="checkbox"]:checked'))
+                    .map(cb => cb.dataset.label);
+                incorrectRecord.userAnswer = checked.join(', ') || 'No answer';
+                incorrectRecord.correctAnswer = Array.isArray(q.answer) ? q.answer.join(', ') : q.answer;
+                incorrectRecord.options = q.options;
+            } else if (q.questionType === 'hotspot') {
+                incorrectRecord.statements = q.statements.map((stmt, idx) => {
+                    const radios = document.querySelectorAll(`input[name="stmt${idx}"]`);
+                    let chosenVal = null;
+                    radios.forEach(r => {
+                        if (r.checked) chosenVal = r.value;
+                    });
+                    return {
+                        text: stmt.text,
+                        correctAnswer: stmt.answer,
+                        userAnswer: chosenVal || 'No answer'
+                    };
+                });
+            } else if (q.questionType === 'drag-drop') {
+                incorrectRecord.matches = q.matches;
+                incorrectRecord.userMatches = {};
+                document.querySelectorAll('.drop-zone').forEach(zone => {
+                    const desc = zone.dataset.description;
+                    const droppedItem = zone.dataset.droppedItem || 'Not matched';
+                    incorrectRecord.userMatches[droppedItem] = desc;
+                });
+            }
+
+            incorrectRecord.explanation = q.explanation;
+            incorrectQuestions.push(incorrectRecord);
         }
         updateScoreDisplay();
         saveProgress();
@@ -1143,9 +1496,7 @@
             renderQuestion();
         } else {
             clearSavedProgress();
-            alert(`Congratulations! You've completed all ${questions.length} questions!
-Your final score: ${correctCount} / ${attemptCount} correct`);
-            showWelcomeScreen();
+            showResultsPage();
         }
     }
 
@@ -1161,11 +1512,10 @@ Your final score: ${correctCount} / ${attemptCount} correct`);
     document.getElementById('fileSelector').addEventListener('change', (e) => {
         const newFile = e.target.value;
         if (confirm(`Switch to ${newFile}? Your current progress will be saved, but score will reset.`)) {
-            // save current progress
             saveProgress();
-            // reset score for new file
             correctCount = 0;
             attemptCount = 0;
+            incorrectQuestions = [];
             loadQuestions(newFile);
         } else {
             e.target.value = currentFile;
